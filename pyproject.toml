@@ -1,0 +1,113 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graham-rl-commons"
+version = "0.1.0"
+description = "Shared Reinforcement Learning components for optimizing decisions across Graham's project ecosystem"
+authors = [{name = "Graham", email = "graham@example.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # Core RL dependencies
+    "numpy>=1.24.0",
+    "torch>=2.0.0",
+    "gymnasium>=0.28.0",
+    "stable-baselines3>=2.0.0",
+    
+    # Distributed training
+    "ray[default]>=2.5.0",
+    
+    # Monitoring and visualization
+    "wandb>=0.15.0",
+    "tensorboard>=2.13.0",
+    "matplotlib>=3.7.0",
+    "plotly>=5.14.0",
+    
+    # Data handling
+    "pydantic>=2.0.0",
+    "pandas>=2.0.0",
+    
+    # CLI and formatting
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+    
+    # API/MCP support
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "httpx>=0.24.0",
+    
+    # Utilities
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.11.0",
+    "black>=23.0.0",
+    "ruff>=0.0.280",
+    "mypy>=1.4.0",
+    "ipykernel>=6.25.0",
+    "notebook>=7.0.0",
+]
+
+monitoring = [
+    "prometheus-client>=0.17.0",
+    "grafana-api>=1.0.0",
+    "streamlit>=1.25.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/grahama1970/graham-rl-commons"
+"Bug Reports" = "https://github.com/grahama1970/graham-rl-commons/issues"
+"Documentation" = "https://github.com/grahama1970/graham-rl-commons/docs"
+
+[project.scripts]
+rl-commons = "graham_rl_commons.cli.app:main"
+rl-monitor = "graham_rl_commons.monitoring.dashboard:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["graham_rl_commons*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.json", "*.txt"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]  # line too long
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["test"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
