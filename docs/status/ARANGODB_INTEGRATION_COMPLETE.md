@@ -6,7 +6,7 @@ Successfully implemented PPO-based optimizer for ArangoDB parameter tuning as ou
 
 ## What Was Implemented
 
-### 1. ArangoDBOptimizer Class (`src/graham_rl_commons/integrations/arangodb_optimizer.py`)
+### 1. ArangoDBOptimizer Class (`src/rl_commons/integrations/arangodb_optimizer.py`)
 - ✅ PPO agent integration for continuous parameter optimization
 - ✅ 8-dimensional state representation:
   - 4 normalized parameters (cache_size, timeout, thread_pool, connection_pool)
@@ -49,7 +49,7 @@ As specified in the requirements:
 ## Usage Example
 
 ```python
-from graham_rl_commons.integrations import ArangoDBOptimizer
+from rl_commons.integrations import ArangoDBOptimizer
 
 # Create optimizer
 optimizer = ArangoDBOptimizer(
@@ -99,12 +99,12 @@ optimizer.update_with_feedback(state, action, new_metrics, new_params)
 
 ## Files Created/Modified
 
-- `src/graham_rl_commons/integrations/__init__.py` (new)
-- `src/graham_rl_commons/integrations/arangodb_optimizer.py` (new)
+- `src/rl_commons/integrations/__init__.py` (new)
+- `src/rl_commons/integrations/arangodb_optimizer.py` (new)
 - `examples/arangodb_integration.py` (new)
 - `test/integration/test_arangodb_optimizer.py` (new)
-- `src/graham_rl_commons/__init__.py` (updated to export ArangoDBOptimizer)
-- `src/graham_rl_commons/algorithms/ppo/ppo.py` (fixed syntax errors)
+- `src/rl_commons/__init__.py` (updated to export ArangoDBOptimizer)
+- `src/rl_commons/algorithms/ppo/ppo.py` (fixed syntax errors)
 
 ## Conclusion
 

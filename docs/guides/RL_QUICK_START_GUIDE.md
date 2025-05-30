@@ -1,12 +1,12 @@
 # Quick Start Guide: RL Integration
 
-## Step 1: Create graham_rl_commons (Task #001)
+## Step 1: Create rl_commons (Task #001)
 
 ```bash
 # Create the shared module
 cd /home/graham/workspace/experiments
-mkdir -p graham_rl_commons/src/graham_rl_commons/{core,algorithms,monitoring}
-cd graham_rl_commons
+mkdir -p rl_commons/src/rl_commons/{core,algorithms,monitoring}
+cd rl_commons
 
 # Create pyproject.toml
 cat > pyproject.toml << 'TOML'
@@ -15,7 +15,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "graham_rl_commons"
+name = "rl_commons"
 version = "0.1.0"
 dependencies = [
     "numpy>=1.20.0",
@@ -25,7 +25,7 @@ dependencies = [
 TOML
 
 # Create base agent
-cat > src/graham_rl_commons/core/base.py << 'PYTHON'
+cat > src/rl_commons/core/base.py << 'PYTHON'
 from abc import ABC, abstractmethod
 import numpy as np
 
@@ -44,7 +44,7 @@ PYTHON
 
 ```python
 # In claude_max_proxy/src/llm_call/rl_integration.py
-from graham_rl_commons import ContextualBandit
+from rl_commons import ContextualBandit
 import numpy as np
 
 class ProviderSelector:
@@ -141,7 +141,7 @@ def test_provider_selection_adapts():
 
 ```python
 # Enable monitoring
-from graham_rl_commons.monitoring import RLTracker
+from rl_commons.monitoring import RLTracker
 
 tracker = RLTracker("claude_max_proxy")
 
@@ -184,7 +184,7 @@ class SafeProviderSelector:
 
 ## Expected Timeline
 
-- **Day 1-2**: Create graham_rl_commons base
+- **Day 1-2**: Create rl_commons base
 - **Day 3-4**: Implement contextual bandit
 - **Day 5**: Integrate with claude_max_proxy
 - **Day 6-7**: Test and monitor
@@ -200,7 +200,7 @@ class SafeProviderSelector:
 
 ## Success Checklist
 
-- [ ] graham_rl_commons package created and installable
+- [ ] rl_commons package created and installable
 - [ ] Basic contextual bandit implemented
 - [ ] First integration (claude_max_proxy) working
 - [ ] Tests showing adaptation/learning

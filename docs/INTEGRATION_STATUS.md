@@ -36,7 +36,7 @@ selector.update_from_result(request, provider, result, latency, cost)
 
 **Proposed Integration**:
 ```python
-from graham_rl_commons import DQNAgent
+from rl_commons import DQNAgent
 
 class ProcessingStrategySelector:
     def __init__(self):
@@ -60,7 +60,7 @@ class ProcessingStrategySelector:
 
 **Proposed Integration**:
 ```python
-from graham_rl_commons import HierarchicalRLAgent
+from rl_commons import HierarchicalRLAgent
 
 class ModuleOrchestrator:
     def __init__(self):
@@ -96,7 +96,7 @@ All integrations follow this pattern:
 
 1. **Import from rl_commons**:
    ```python
-   from graham_rl_commons import [Algorithm], RLState, RLTracker
+   from rl_commons import [Algorithm], RLState, RLTracker
    ```
 
 2. **Create domain-specific wrapper**:

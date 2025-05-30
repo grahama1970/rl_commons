@@ -6,7 +6,7 @@ External Dependencies:
 - None
 
 Example Usage:
->>> from graham_rl_commons.integrations import ArangoDBOptimizer
+>>> from rl_commons.integrations import ArangoDBOptimizer
 >>> optimizer = ArangoDBOptimizer()
 """
 

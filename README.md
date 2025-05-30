@@ -1,4 +1,4 @@
-# Graham RL Commons 🤖
+# RL Commons 🤖
 
 Shared Reinforcement Learning components for optimizing decisions across Graham's project ecosystem.
 
@@ -20,14 +20,14 @@ cd /home/graham/workspace/experiments/rl_commons
 pip install -e .
 
 # Install from git (once published)
-pip install git+https://github.com/grahama1970/graham-rl-commons.git
+pip install git+https://github.com/grahama1970/rl-commons.git
 ```
 
 ## 🎯 Quick Start
 
 ### Provider Selection (Contextual Bandit)
 ```python
-from graham_rl_commons import ContextualBandit
+from rl_commons import ContextualBandit
 
 # Initialize bandit for provider selection
 bandit = ContextualBandit(
@@ -46,7 +46,7 @@ bandit.update(context, provider, reward)
 
 ### Document Processing (DQN)
 ```python
-from graham_rl_commons import DQNAgent
+from rl_commons import DQNAgent
 
 # Initialize DQN for processing decisions
 agent = DQNAgent(
@@ -89,7 +89,7 @@ rl-commons rollback
 ## 🏗️ Architecture
 
 ```
-graham_rl_commons/
+rl_commons/
 ├── core/              # Base classes and interfaces
 ├── algorithms/        # RL algorithm implementations
 │   ├── bandits/      # Contextual bandits for selection
@@ -107,7 +107,7 @@ graham_rl_commons/
 pytest
 
 # Run with coverage
-pytest --cov=graham_rl_commons
+pytest --cov=rl_commons
 
 # Run specific test category
 pytest test/unit/

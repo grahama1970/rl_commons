@@ -9,8 +9,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
 import numpy as np
 import torch
-from graham_rl_commons.algorithms.a3c import A3CAgent, A3CConfig, ActorCriticNetwork
-from graham_rl_commons.core.base import RLState
+from rl_commons.algorithms.a3c import A3CAgent, A3CConfig, ActorCriticNetwork
+from rl_commons.core.base import RLState
 
 
 def test_a3c_components():

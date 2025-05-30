@@ -77,17 +77,17 @@ monitoring = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/grahama1970/graham-rl-commons"
-"Bug Reports" = "https://github.com/grahama1970/graham-rl-commons/issues"
-"Documentation" = "https://github.com/grahama1970/graham-rl-commons/docs"
+"Homepage" = "https://github.com/grahama1970/rl-commons"
+"Bug Reports" = "https://github.com/grahama1970/rl-commons/issues"
+"Documentation" = "https://github.com/grahama1970/rl-commons/docs"
 
 [project.scripts]
-rl-commons = "graham_rl_commons.cli.app:main"
-rl-monitor = "graham_rl_commons.monitoring.dashboard:main"
+rl-commons = "rl_commons.cli.app:main"
+rl-monitor = "rl_commons.monitoring.dashboard:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["graham_rl_commons*"]
+include = ["rl_commons*"]
 
 [tool.setuptools.package-data]
 "*" = ["*.yaml", "*.json", "*.txt"]

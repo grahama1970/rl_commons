@@ -7,7 +7,7 @@ External Dependencies:
 - torch: https://pytorch.org/docs/stable/
 
 Example Usage:
->>> from graham_rl_commons.integrations import ArangoDBOptimizer
+>>> from rl_commons.integrations import ArangoDBOptimizer
 >>> optimizer = ArangoDBOptimizer()
 >>> state = optimizer.get_current_state(db_metrics)
 >>> action = optimizer.optimize(state)

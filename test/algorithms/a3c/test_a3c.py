@@ -10,8 +10,8 @@ from pathlib import Path
 import tempfile
 import time
 
-from graham_rl_commons.algorithms.a3c import A3CAgent, A3CConfig, ActorCriticNetwork
-from graham_rl_commons.core.base import RLState, RLAction
+from rl_commons.algorithms.a3c import A3CAgent, A3CConfig, ActorCriticNetwork
+from rl_commons.core.base import RLState, RLAction
 
 
 class TestA3CComponents:

@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 @pytest.fixture
 def sample_state():
     """Create a sample RL state for testing"""
-    from graham_rl_commons.core import RLState
+    from rl_commons.core import RLState
     return RLState(
         features=np.array([0.5, 0.3, 0.8, 0.2, 0.9]),
         context={"request_id": "test123"}
@@ -22,7 +22,7 @@ def sample_state():
 @pytest.fixture
 def sample_action():
     """Create a sample RL action for testing"""
-    from graham_rl_commons.core import RLAction
+    from rl_commons.core import RLAction
     return RLAction(
         action_type="select_provider",
         action_id=1,
@@ -33,7 +33,7 @@ def sample_action():
 @pytest.fixture
 def sample_reward():
     """Create a sample RL reward for testing"""
-    from graham_rl_commons.core import RLReward
+    from rl_commons.core import RLReward
     return RLReward(
         value=0.85,
         components={

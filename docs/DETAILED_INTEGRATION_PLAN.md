@@ -89,7 +89,7 @@ marker/src/marker/rl_integration/
 #### Phase 4: Core Integration (Day 2-3)
 ```python
 # strategy_selector.py
-from graham_rl_commons import DQNAgent, RLState, RLTracker
+from rl_commons import DQNAgent, RLState, RLTracker
 
 class ProcessingStrategySelector:
     def __init__(self, model_path: Optional[Path] = None):
@@ -291,7 +291,7 @@ class HierarchicalRLAgent(RLAgent):
 #### Phase 4: Module Orchestrator Integration (Day 5-6)
 ```python
 # claude-module-communicator/src/rl_orchestration/module_router.py
-from graham_rl_commons import HierarchicalRLAgent, RLState
+from rl_commons import HierarchicalRLAgent, RLState
 
 class RLModuleOrchestrator:
     def __init__(self):
@@ -477,4 +477,4 @@ class TransferLearning:
 3. **Next Week**: Implement hierarchical RL
 4. **Following Week**: Complete module communicator integration
 
-The modular design of `graham_rl_commons` makes it easy to add new algorithms and integrate with additional projects as needed.
+The modular design of `rl_commons` makes it easy to add new algorithms and integrate with additional projects as needed.

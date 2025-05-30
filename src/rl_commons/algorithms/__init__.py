@@ -1,4 +1,4 @@
-"""RL algorithms available in Graham RL Commons"""
+"""RL algorithms available in RL Commons"""
 
 from .dqn.vanilla_dqn import DQNAgent
 from .bandits.contextual import ContextualBandit

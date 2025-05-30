@@ -21,13 +21,13 @@ Previous Session: PPO Implementation for ArangoDB
 
 ### RL Commons Core
 - Framework: /home/graham/workspace/experiments/rl_commons/
-- Algorithms: src/graham_rl_commons/algorithms/
-- PPO Implementation: src/graham_rl_commons/algorithms/ppo/ppo.py
+- Algorithms: src/rl_commons/algorithms/
+- PPO Implementation: src/rl_commons/algorithms/ppo/ppo.py
 - ArangoDB Example: docs/examples/arangodb_ppo_simple.py
 - Integration guide: docs/INTEGRATION_GUIDE.md
 
 ### PPO Implementation Details
-- **Location**: /home/graham/workspace/experiments/rl_commons/src/graham_rl_commons/algorithms/ppo/
+- **Location**: /home/graham/workspace/experiments/rl_commons/src/rl_commons/algorithms/ppo/
 - **Key Features**:
   - Actor-Critic architecture with shared layers
   - Continuous and discrete action space support

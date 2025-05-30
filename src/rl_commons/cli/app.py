@@ -1,4 +1,4 @@
-"""CLI interface for Graham RL Commons"""
+"""CLI interface for RL Commons"""
 
 import typer
 from rich.console import Console
@@ -10,7 +10,7 @@ import json
 
 app = typer.Typer(
     name="rl-commons",
-    help="Graham RL Commons - Reinforcement Learning toolkit",
+    help="RL Commons - Reinforcement Learning toolkit",
     add_completion=False,
 )
 console = Console()

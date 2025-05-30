@@ -171,7 +171,7 @@ For issues or questions:
 1. Check the documentation
 2. Review example implementations
 3. Run tests with verbose output
-4. Check logs in `~/.graham_rl_commons/logs/`
+4. Check logs in `~/.rl_commons/logs/`
 
 ## 🎯 Next Priority Actions
 

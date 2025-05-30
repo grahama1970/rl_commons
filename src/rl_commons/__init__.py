@@ -1,4 +1,4 @@
-"""Graham RL Commons - Shared Reinforcement Learning Components"""
+"""RL Commons - Shared Reinforcement Learning Components"""
 
 from .core.base import RLAgent, RLState, RLAction, RLReward
 from .core.replay_buffer import ReplayBuffer

@@ -37,7 +37,7 @@ After analyzing the three target modules (claude-module-communicator, claude_max
 ## Proposed Architecture
 
 ```
-graham_rl_commons/                    # Shared module
+rl_commons/                    # Shared module
 ├── core/                            # Base components (all projects use)
 │   ├── base.py                     # RLAgent, RLState, RLAction
 │   ├── replay_buffer.py            # Experience storage
@@ -76,7 +76,7 @@ claude-module-communicator/src/
 ### 1. **Rapid Development**
 ```python
 # In claude_max_proxy - just 50 lines!
-from graham_rl_commons import ContextualBandit, RLTracker
+from rl_commons import ContextualBandit, RLTracker
 
 class ProviderSelector(ContextualBandit):
     def extract_features(self, request):
@@ -151,7 +151,7 @@ class GradualRollout:
 ## Migration Path
 
 ### Phase 1: Foundation (Week 1-2)
-1. Create `graham_rl_commons` package
+1. Create `rl_commons` package
 2. Implement base classes and contextual bandit
 3. Add basic monitoring
 
@@ -194,7 +194,7 @@ rl_metrics = {
 
 ## Conclusion
 
-Building a shared `graham_rl_commons` module is the optimal approach because:
+Building a shared `rl_commons` module is the optimal approach because:
 
 1. **70% code reuse** - Most RL logic is common
 2. **Faster development** - 75 lines vs 1000+ per integration
@@ -209,7 +209,7 @@ The shared module with adapters pattern gives us the best of both worlds: consis
 Execute Task #001 from the task list:
 ```bash
 cd /home/graham/workspace/experiments
-mkdir graham_rl_commons
-cd graham_rl_commons
+mkdir rl_commons
+cd rl_commons
 # Follow task #001 implementation steps
 ```

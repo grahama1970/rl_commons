@@ -2,7 +2,7 @@
 
 import pytest
 import numpy as np
-from graham_rl_commons.core import RLState, RLAction, RLReward, ReplayBuffer
+from rl_commons.core import RLState, RLAction, RLReward, ReplayBuffer
 
 
 def test_rl_state_creation(sample_state):

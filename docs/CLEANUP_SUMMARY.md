@@ -46,7 +46,7 @@
 ### Removed
 - `src/cli/` - Empty directory
 - `src/mcp/` - Empty directory
-- `src/graham_rl_commons.egg-info/` - Build artifact
+- `src/rl_commons.egg-info/` - Build artifact
 - All `__pycache__/` directories
 
 ## 📋 Test Directory Reorganization

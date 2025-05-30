@@ -20,7 +20,7 @@ Previous Session: Marker test fixes and benchmarking
 
 ### RL Commons Core
 - Framework: /home/graham/workspace/experiments/rl_commons/
-- Algorithms: src/graham_rl_commons/algorithms/
+- Algorithms: src/rl_commons/algorithms/
 - Integration guide: docs/INTEGRATION_GUIDE.md
 
 ### Marker Integration
@@ -66,7 +66,7 @@ Fix remaining 6 test failures:
 
 ### 2. PPO Implementation (CRITICAL - 2-3 days)
 
-**Location**: Create at src/graham_rl_commons/algorithms/ppo/
+**Location**: Create at src/rl_commons/algorithms/ppo/
 
 **Requirements**:
 - Actor-Critic architecture

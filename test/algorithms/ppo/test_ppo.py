@@ -4,8 +4,8 @@ import numpy as np
 import sys
 sys.path.append('/home/graham/workspace/experiments/rl_commons/src')
 
-from graham_rl_commons.algorithms.ppo import PPOAgent
-from graham_rl_commons.core.base import RLState, RLAction, RLReward
+from rl_commons.algorithms.ppo import PPOAgent
+from rl_commons.core.base import RLState, RLAction, RLReward
 
 
 def test_ppo_continuous():

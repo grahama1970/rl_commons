@@ -7,8 +7,8 @@ import numpy as np
 from pathlib import Path
 import tempfile
 
-from graham_rl_commons.integrations import ArangoDBOptimizer
-from graham_rl_commons.integrations.arangodb_optimizer import ArangoDBMetrics, ArangoDBParameters
+from rl_commons.integrations import ArangoDBOptimizer
+from rl_commons.integrations.arangodb_optimizer import ArangoDBMetrics, ArangoDBParameters
 
 
 class TestArangoDBOptimizer:

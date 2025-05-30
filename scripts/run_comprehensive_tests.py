@@ -159,12 +159,12 @@ def test_imports(reporter: TestReporter):
     print("\n🔍 Testing module imports...")
     
     modules = [
-        "graham_rl_commons",
-        "graham_rl_commons.algorithms.ppo",
-        "graham_rl_commons.integrations.arangodb_optimizer",
-        "graham_rl_commons.algorithms.bandits",
-        "graham_rl_commons.algorithms.dqn",
-        "graham_rl_commons.algorithms.hierarchical",
+        "rl_commons",
+        "rl_commons.algorithms.ppo",
+        "rl_commons.integrations.arangodb_optimizer",
+        "rl_commons.algorithms.bandits",
+        "rl_commons.algorithms.dqn",
+        "rl_commons.algorithms.hierarchical",
     ]
     
     for module in modules:
@@ -205,7 +205,7 @@ def test_arangodb_integration(reporter: TestReporter):
     # Test the integration module
     start = time.time()
     exit_code, stdout, stderr = run_command(
-        ["python", "-m", "graham_rl_commons.integrations.arangodb_optimizer"],
+        ["python", "-m", "rl_commons.integrations.arangodb_optimizer"],
         cwd=Path(__file__).parent
     )
     

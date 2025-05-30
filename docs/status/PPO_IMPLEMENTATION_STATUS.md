@@ -21,7 +21,7 @@ Successfully implemented Proximal Policy Optimization (PPO) algorithm with the f
    - Gradient clipping to prevent instability
 
 3. **Implementation Details**
-   - Location: `/home/graham/workspace/experiments/rl_commons/src/graham_rl_commons/algorithms/ppo/`
+   - Location: `/home/graham/workspace/experiments/rl_commons/src/rl_commons/algorithms/ppo/`
    - Main file: `ppo.py` with ~450 lines of code
    - Follows the same pattern as existing DQN implementation
    - Integrated into the algorithms module
@@ -34,11 +34,11 @@ Successfully implemented Proximal Policy Optimization (PPO) algorithm with the f
 ## 📁 Files Created/Modified
 
 1. **New PPO Implementation**
-   - `/src/graham_rl_commons/algorithms/ppo/__init__.py`
-   - `/src/graham_rl_commons/algorithms/ppo/ppo.py`
+   - `/src/rl_commons/algorithms/ppo/__init__.py`
+   - `/src/rl_commons/algorithms/ppo/ppo.py`
 
 2. **Updated Integration**
-   - `/src/graham_rl_commons/algorithms/__init__.py` - Added PPO import
+   - `/src/rl_commons/algorithms/__init__.py` - Added PPO import
 
 3. **Documentation and Examples**
    - `/docs/examples/arangodb_ppo_simple.py` - Usage example for ArangoDB

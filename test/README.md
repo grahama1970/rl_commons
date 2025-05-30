@@ -27,7 +27,7 @@ test/
 python -m pytest test/
 
 # With coverage
-python -m pytest test/ --cov=graham_rl_commons --cov-report=html
+python -m pytest test/ --cov=rl_commons --cov-report=html
 
 # Verbose output
 python -m pytest test/ -v
@@ -83,10 +83,10 @@ To generate a detailed coverage report:
 
 ```bash
 # Generate HTML coverage report
-python -m pytest test/ --cov=graham_rl_commons --cov-report=html
+python -m pytest test/ --cov=rl_commons --cov-report=html
 
 # View coverage in terminal
-python -m pytest test/ --cov=graham_rl_commons --cov-report=term-missing
+python -m pytest test/ --cov=rl_commons --cov-report=term-missing
 ```
 
 Coverage reports will be generated in `htmlcov/` directory.
@@ -102,7 +102,7 @@ Before pushing changes, ensure:
 
 2. **No import errors**:
    ```bash
-   python -c "import graham_rl_commons; print('✅ Import successful')"
+   python -c "import rl_commons; print('✅ Import successful')"
    ```
 
 3. **Examples still work**:
@@ -121,7 +121,7 @@ Before pushing changes, ensure:
 When adding new features, ensure:
 
 1. **Test location mirrors source location**:
-   - Source: `src/graham_rl_commons/algorithms/new_algo/`
+   - Source: `src/rl_commons/algorithms/new_algo/`
    - Tests: `test/algorithms/new_algo/`
 
 2. **Test naming convention**:
@@ -136,7 +136,7 @@ When adding new features, ensure:
 Example test structure:
 ```python
 import pytest
-from graham_rl_commons.algorithms.new_algo import NewAlgorithm
+from rl_commons.algorithms.new_algo import NewAlgorithm
 
 class TestNewAlgorithm:
     def test_initialization(self):

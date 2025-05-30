@@ -114,7 +114,7 @@ def validate_completed_work():
     
     # Test ArangoDB integration
     success, output, error = run_command(
-        ["python", "-m", "graham_rl_commons.integrations.arangodb_optimizer"],
+        ["python", "-m", "rl_commons.integrations.arangodb_optimizer"],
         cwd=Path(__file__).parent
     )
     
@@ -251,13 +251,13 @@ def validate_completed_work():
     print("=" * 60)
     
     import_tests = [
-        ("graham_rl_commons", "Main package"),
-        ("graham_rl_commons.algorithms.ppo", "PPO algorithm"),
-        ("graham_rl_commons.algorithms.a3c", "A3C algorithm"),
-        ("graham_rl_commons.integrations", "Integrations"),
-        ("graham_rl_commons.algorithms.bandits", "Bandits"),
-        ("graham_rl_commons.algorithms.dqn", "DQN"),
-        ("graham_rl_commons.algorithms.hierarchical", "Hierarchical RL")
+        ("rl_commons", "Main package"),
+        ("rl_commons.algorithms.ppo", "PPO algorithm"),
+        ("rl_commons.algorithms.a3c", "A3C algorithm"),
+        ("rl_commons.integrations", "Integrations"),
+        ("rl_commons.algorithms.bandits", "Bandits"),
+        ("rl_commons.algorithms.dqn", "DQN"),
+        ("rl_commons.algorithms.hierarchical", "Hierarchical RL")
     ]
     
     import importlib

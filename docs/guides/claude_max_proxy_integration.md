@@ -12,7 +12,7 @@
    ```toml
    dependencies = [
        # ... existing dependencies ...
-       "graham-rl-commons @ git+file:///home/graham/workspace/experiments/rl_commons",
+       "rl-commons @ git+file:///home/graham/workspace/experiments/rl_commons",
    ]
    ```
 
