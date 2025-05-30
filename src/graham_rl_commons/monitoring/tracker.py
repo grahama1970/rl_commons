@@ -145,7 +145,7 @@ class RLTracker:
     def save_metrics(self, path: Optional[Path] = None) -> None:
         """Save metrics to file"""
         if path is None:
-            path = Path(f"rl_metrics_{self.project_name}_{datetime.now().strftime(%Y%m%d_%H%M%S)}.json")
+            path = Path(f"rl_metrics_{self.project_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
         
         metrics_data = {
             "project": self.project_name,

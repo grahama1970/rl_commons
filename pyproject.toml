@@ -52,6 +52,9 @@ dependencies = [
     # Utilities
     "python-dotenv>=1.0.0",
     "pyyaml>=6.0",
+    
+    # Test reporting (local path for now)
+    # "claude-test-reporter @ git+https://github.com/grahama1970/claude-test-reporter.git@main",
 ]
 
 [project.optional-dependencies]

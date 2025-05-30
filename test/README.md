@@ -1,184 +1,182 @@
-# ArangoDB Memory Bank Tests
+# RL Commons Test Suite
 
-This directory contains all tests for the ArangoDB Memory Bank project. The test structure mirrors the source code structure in `src/arangodb/` for easy navigation and maintenance.
+This directory contains all tests for the Graham RL Commons library. The test structure mirrors the source code structure for easy navigation.
 
-## Test Structure
+## 📁 Test Structure
 
 ```
-tests/
-├── arangodb/           # Mirrors src/arangodb/
-│   ├── cli/           # CLI command tests
-│   ├── core/          # Core functionality tests
-│   │   ├── graph/     # Graph operations tests
-│   │   ├── memory/    # Memory management tests
-│   │   ├── search/    # Search functionality tests
-│   │   └── utils/     # Utility function tests
-│   ├── mcp/           # MCP integration tests
-│   ├── qa/            # Q&A module tests
-│   ├── qa_generation/ # Q&A generation tests
-│   ├── services/      # Service layer tests
-│   ├── tasks/         # Task module tests
-│   └── visualization/ # Visualization tests
-├── data/              # Test data files (JSON, etc.)
-├── fixtures/          # Test fixtures
-├── integration/       # Integration tests
-└── unit/             # Unit tests
+test/
+├── algorithms/         # Algorithm-specific tests
+│   ├── a3c/           # A3C algorithm tests
+│   ├── bandits/       # Contextual bandit tests
+│   ├── dqn/           # DQN algorithm tests
+│   ├── hierarchical/  # Hierarchical RL tests
+│   └── ppo/           # PPO algorithm tests
+├── core/              # Core component tests
+├── integrations/      # Integration tests
+├── monitoring/        # Monitoring and tracking tests
+├── utils/             # Utility function tests
+└── cli/               # CLI tests
 ```
 
-## Running Tests
+## 🚀 Running Tests
 
 ### Run All Tests
 ```bash
 # From project root
-python -m pytest tests/ -v
+python -m pytest test/
 
-# Or using the test runner script
-python scripts/testing/run_tests.py
+# With coverage
+python -m pytest test/ --cov=graham_rl_commons --cov-report=html
+
+# Verbose output
+python -m pytest test/ -v
 ```
 
 ### Run Specific Test Categories
 
-#### CLI Tests Only
+#### Algorithm Tests
 ```bash
-python -m pytest tests/arangodb/cli/ -v
-```
+# All algorithm tests
+python -m pytest test/algorithms/
 
-#### Core Functionality Tests
-```bash
-python -m pytest tests/arangodb/core/ -v
+# Specific algorithm
+python -m pytest test/algorithms/ppo/
+python -m pytest test/algorithms/a3c/
 ```
 
 #### Integration Tests
 ```bash
-python -m pytest tests/integration/ -v
+python -m pytest test/integrations/
 ```
 
-#### Unit Tests
+### Run Individual Test Files
 ```bash
-python -m pytest tests/unit/ -v
+# PPO tests
+python -m pytest test/algorithms/ppo/test_ppo.py
+
+# A3C tests
+python -m pytest test/algorithms/a3c/test_a3c.py
+
+# ArangoDB integration
+python -m pytest test/integrations/test_arangodb_optimizer.py
 ```
 
-### Run Tests with Coverage
+## 🧪 Quick Validation Scripts
+
+For quick validation without pytest, run the standalone test scripts:
+
 ```bash
-python -m pytest tests/ --cov=arangodb --cov-report=html
+# Validate PPO implementation
+python test/algorithms/ppo/test_ppo.py
+
+# Validate A3C implementation (simple test without multiprocessing)
+python test/algorithms/a3c/test_a3c_simple.py
+
+# Run comprehensive validation
+python scripts/run_comprehensive_tests.py
 ```
 
-### Run Tests in Parallel
+## 📊 Test Coverage
+
+To generate a detailed coverage report:
+
 ```bash
-python -m pytest tests/ -n auto
+# Generate HTML coverage report
+python -m pytest test/ --cov=graham_rl_commons --cov-report=html
+
+# View coverage in terminal
+python -m pytest test/ --cov=graham_rl_commons --cov-report=term-missing
 ```
 
-## Test Requirements
+Coverage reports will be generated in `htmlcov/` directory.
 
-1. **ArangoDB**: Must have ArangoDB running locally on default port (8529)
-2. **Test Database**: Tests use `pizza_test` and `memory_bank` databases
-3. **Redis**: Required for LiteLLM caching (localhost:6379)
-4. **Dependencies**: Install all dependencies with `pip install -e ".[dev]"`
+## ✅ Pre-Push Checklist
 
-## Writing Tests
+Before pushing changes, ensure:
 
-### Test Naming Convention
-- Test files must be named `test_*.py`
-- Test classes should be named `Test*`
-- Test methods should be named `test_*`
+1. **All tests pass**:
+   ```bash
+   python -m pytest test/
+   ```
 
-### No Mocking Policy
-Per CLAUDE.md requirements:
-- **NEVER mock core functionality**
-- Always test with real database connections
-- Use actual data, not fake inputs
-- Verify outputs against concrete expected results
+2. **No import errors**:
+   ```bash
+   python -c "import graham_rl_commons; print('✅ Import successful')"
+   ```
 
-### Test Organization
-- Place tests in directories that mirror the source structure
-- Integration tests go in `tests/integration/`
-- Unit tests for isolated functions go in `tests/unit/`
-- Test data files go in `tests/data/`
-- Test fixtures go in `tests/fixtures/`
+3. **Examples still work**:
+   ```bash
+   python examples/arangodb_integration.py
+   python examples/sparta_a3c_integration.py
+   ```
 
-## Common Test Patterns
+4. **Validation passes**:
+   ```bash
+   python scripts/run_final_validation.py
+   ```
 
-### Database Setup
-Most tests use fixtures from `conftest.py` that provide:
-- `get_test_db()`: Returns a test database connection
-- `setup_test_data`: Populates test collections with sample data
+## 🔧 Writing New Tests
 
-### CLI Testing
-```python
-from typer.testing import CliRunner
-from arangodb.cli.main import app
+When adding new features, ensure:
 
-runner = CliRunner()
-result = runner.invoke(app, ["command", "subcommand", "--option", "value"])
-assert result.exit_code == 0
-```
+1. **Test location mirrors source location**:
+   - Source: `src/graham_rl_commons/algorithms/new_algo/`
+   - Tests: `test/algorithms/new_algo/`
 
-### Async Testing
+2. **Test naming convention**:
+   - Test files: `test_*.py`
+   - Test functions: `test_*`
+   - Test classes: `Test*`
+
+3. **Include both unit and integration tests**:
+   - Unit tests: Test individual components
+   - Integration tests: Test component interactions
+
+Example test structure:
 ```python
 import pytest
+from graham_rl_commons.algorithms.new_algo import NewAlgorithm
 
-@pytest.mark.asyncio
-async def test_async_function():
-    result = await async_function()
-    assert result == expected_value
+class TestNewAlgorithm:
+    def test_initialization(self):
+        """Test algorithm initialization"""
+        algo = NewAlgorithm()
+        assert algo is not None
+    
+    def test_action_selection(self):
+        """Test action selection"""
+        # Test implementation
+        pass
+
+def test_integration():
+    """Test algorithm in realistic scenario"""
+    # Integration test
+    pass
 ```
 
-## Continuous Integration
+## 🐛 Debugging Failed Tests
 
-Before pushing code:
-1. Run all tests: `python -m pytest tests/ -v`
-2. Check for any warnings or deprecations
-3. Ensure 100% of tests pass
-4. No skipped tests (all functionality should be testable)
+If tests fail:
 
-## Test Data
+1. **Run with verbose output**:
+   ```bash
+   python -m pytest test/path/to/test.py -v -s
+   ```
 
-Test data files are located in `tests/data/`:
-- Pizza shop example data for testing general functionality
-- Memory/conversation data for testing memory operations
-- Graph relationship data for testing graph operations
+2. **Run specific test**:
+   ```bash
+   python -m pytest test/path/to/test.py::TestClass::test_method
+   ```
 
-Setup scripts for test data are in `scripts/setup/test_data/`
+3. **Check logs**:
+   ```bash
+   tail -f logs/*.log
+   ```
 
-## Troubleshooting
+## 📝 Test Maintenance
 
-### Common Issues
-
-1. **Database Connection Errors**
-   - Ensure ArangoDB is running: `sudo systemctl status arangodb3`
-   - Check credentials in environment variables
-
-2. **Redis Connection Errors**
-   - Ensure Redis is running: `redis-cli ping`
-   - Should return "PONG"
-
-3. **Import Errors**
-   - Install package in development mode: `pip install -e .`
-   - Ensure PYTHONPATH includes project root
-
-4. **Test Discovery Issues**
-   - Ensure all test directories have `__init__.py` files
-   - Use proper test naming conventions
-
-## Maintenance
-
-- Keep tests synchronized with source code changes
-- Remove obsolete tests when features are removed
-- Update test data when schemas change
-- Document any special test requirements in test docstrings
-
-## Quick Verification
-
-Before committing changes, run:
-```bash
-# Quick smoke test (fast)
-python -m pytest tests/unit/ -v --maxfail=1
-
-# Full test suite
-python -m pytest tests/ -v
-```
-
-For 100% confidence that nothing is broken:
-```bash
-python -m pytest tests/arangodb/cli/ -v  # All 96 CLI tests should pass
-```
+- Keep tests up to date with source changes
+- Remove obsolete tests
+- Archive old tests in `archive/` if needed for reference
+- Update this README when test structure changes
