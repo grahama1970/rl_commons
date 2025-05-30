@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "graham-rl-commons"
+name = "rl-commons"
 version = "0.1.0"
 description = "Shared Reinforcement Learning components for optimizing decisions across Graham's project ecosystem"
 authors = [{name = "Graham", email = "graham@example.com"}]
