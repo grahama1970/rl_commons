@@ -1,4 +1,7 @@
-"""RL algorithms available in RL Commons"""
+"""RL algorithms available in RL Commons
+
+Module: __init__.py
+"""
 
 from .dqn.vanilla_dqn import DQNAgent
 from .bandits.contextual import ContextualBandit

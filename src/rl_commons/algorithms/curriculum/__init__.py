@@ -1,4 +1,7 @@
-"""Curriculum Learning algorithms for progressive task difficulty"""
+"""Curriculum Learning algorithms for progressive task difficulty
+
+Module: __init__.py
+"""
 
 from .base import (
     CurriculumScheduler,

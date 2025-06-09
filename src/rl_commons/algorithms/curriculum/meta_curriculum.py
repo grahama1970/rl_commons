@@ -614,7 +614,7 @@ if __name__ == "__main__":
     assert "domains_explored" in stats, "Missing domain information"
     assert len(stats["domains_explored"]) > 0, "No domains explored"
     
-    print("✅ Meta-curriculum validation passed")
+    print(" Meta-curriculum validation passed")
     print(f"   Meta difficulty: {stats['current_meta_difficulty']:.2f}")
     print(f"   Domains explored: {stats['domains_explored']}")
     print(f"   Completed tasks: {stats['completed_tasks']}")

@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "total": 12,
+    "passed": 5,
+    "failed": 7,
+    "skipped": 0,
+    "duration": 2.047,
+    "success_rate": "41.7%"
+  },
+  "results": [
+    {
+      "test": "Import rl_commons",
+      "status": "FAIL",
+      "duration": 1.697,
+      "output": "",
+      "error": "cannot import name 'GNNIntegration' from 'rl_commons.algorithms.gnn' (/home/graham/workspace/experiments/rl_commons/src/rl_commons/algorithms/gnn/__init__.py)",
+      "timestamp": "2025-06-01T12:35:56.797224"
+    },
+    {
+      "test": "Import rl_commons.algorithms.ppo",
+      "status": "PASS",
+      "duration": 0.0,
+      "output": "",
+      "error": "",
+      "timestamp": "2025-06-01T12:35:56.797267"
+    },
+    {
+      "test": "Import rl_commons.integrations.arangodb_optimizer",
+      "status": "PASS",
+      "duration": 0.0,
+      "output": "",
+      "error": "",
+      "timestamp": "2025-06-01T12:35:56.797272"
+    },
+    {
+      "test": "Import rl_commons.algorithms.bandits",
+      "status": "PASS",
+      "duration": 0.0,
+      "output": "",
+      "error": "",
+      "timestamp": "2025-06-01T12:35:56.797276"
+    },
+    {
+      "test": "Import rl_commons.algorithms.dqn",
+      "status": "PASS",
+      "duration": 0.0,
+      "output": "",
+      "error": "",
+      "timestamp": "2025-06-01T12:35:56.797279"
+    },
+    {
+      "test": "Import rl_commons.algorithms.hierarchical",
+      "status": "PASS",
+      "duration": 0.0,
+      "output": "",
+      "error": "",
+      "timestamp": "2025-06-01T12:35:56.797283"
+    },
+    {
+      "test": "PPO Implementation",
+      "status": "FAIL",
+      "duration": 0.018,
+      "output": "",
+      "error": "python: can't open file '/home/graham/workspace/experiments/rl_commons/scripts/test_ppo.py': [Errno 2] No such file or directory\n",
+      "timestamp": "2025-06-01T12:35:56.815649"
+    },
+    {
+      "test": "ArangoDB Module Validation",
+      "status": "FAIL",
+      "duration": 0.018,
+      "output": "",
+      "error": "/home/graham/.venv/bin/python: Error while finding module specification for 'rl_commons.integrations.arangodb_optimizer' (ModuleNotFoundError: No module named 'rl_commons')\n",
+      "timestamp": "2025-06-01T12:35:56.834027"
+    },
+    {
+      "test": "ArangoDB Integration Tests",
+      "status": "FAIL",
+      "duration": 0.018,
+      "output": "",
+      "error": "python: can't open file '/home/graham/workspace/experiments/rl_commons/scripts/test/integration/test_arangodb_optimizer.py': [Errno 2] No such file or directory\n",
+      "timestamp": "2025-06-01T12:35:56.852097"
+    },
+    {
+      "test": "ArangoDB Example",
+      "status": "FAIL",
+      "duration": 0.018,
+      "output": "",
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 4, in <module>\nModuleNotFoundError: No module named 'examples'\n",
+      "timestamp": "2025-06-01T12:35:56.870603"
+    },
+    {
+      "test": "Marker Test Fixes",
+      "status": "FAIL",
+      "duration": 0.024,
+      "output": "\ud83d\udd0d Verifying Marker test fixes...\n----------------------------------------\n\u2705 test_calculate_reward_success: Changed from 'time' to 'speed'\n\u274c test_calculate_reward_failure: Fix not found - Updated expectations for positive rewards\n\u274c test_model_persistence: Fix not found - Removed path existence check\n\u2705 test_adaptive_learning: Lowered accuracy to 0.4 for better learning\n\u274c test_gradual_rollout: Fix not found - Fixed to pass numpy array features\n\n\u274c Some fixes are missing!\n",
+      "error": "",
+      "timestamp": "2025-06-01T12:35:56.894368"
+    },
+    {
+      "test": "Pytest Suite",
+      "status": "FAIL",
+      "duration": 0.252,
+      "output": "============================= test session starts ==============================\nplatform linux -- Python 3.11.12, pytest-8.3.5, pluggy-1.6.0\nrootdir: /home/graham/workspace/experiments/rl_commons\nconfigfile: pyproject.toml\nplugins: metadata-3.1.1, cov-6.1.1, allure-pytest-2.14.2, json-report-1.5.0, asyncio-1.0.0, anyio-4.9.0\nasyncio: mode=Mode.STRICT, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function\ncollected 0 items\n\n============================ no tests ran in 0.01s =============================\n",
+      "error": "/home/graham/.venv/lib/python3.11/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option \"asyncio_default_fixture_loop_scope\" is unset.\nThe event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: \"function\", \"class\", \"module\", \"package\", \"session\"\n\n  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))\n",
+      "timestamp": "2025-06-01T12:35:57.146428"
+    }
+  ]
+}

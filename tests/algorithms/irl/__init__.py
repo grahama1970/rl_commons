@@ -1,0 +1,1 @@
+"""Tests for Inverse Reinforcement Learning algorithms."""

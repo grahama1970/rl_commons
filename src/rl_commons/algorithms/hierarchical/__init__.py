@@ -1,4 +1,7 @@
-"""Hierarchical RL algorithms for complex orchestration"""
+"""Hierarchical RL algorithms for complex orchestration
+
+Module: __init__.py
+"""
 
 from .options_framework import (
     Option,

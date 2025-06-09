@@ -1,4 +1,7 @@
-"""CLI interface for RL Commons"""
+"""CLI interface for RL Commons
+
+Module: app.py
+"""
 
 import typer
 from rich.console import Console
@@ -19,7 +22,7 @@ console = Console()
 @app.command()
 def status(project: Optional[str] = None):
     """Show status of RL agents and training"""
-    console.print(Panel.fit("🤖 RL Commons Status", style="bold blue"))
+    console.print(Panel.fit(" RL Commons Status", style="bold blue"))
     
     if project:
         console.print(f"Project: {project}")

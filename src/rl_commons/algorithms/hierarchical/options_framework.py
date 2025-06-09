@@ -1,4 +1,7 @@
-"""Hierarchical RL using Options Framework for complex orchestration"""
+"""Hierarchical RL using Options Framework for complex orchestration
+
+Module: options_framework.py
+"""
 
 import numpy as np
 import torch

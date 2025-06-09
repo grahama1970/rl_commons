@@ -313,4 +313,4 @@ if __name__ == "__main__":
     readiness = tracker.get_readiness_score(0.3)
     assert 0 <= readiness <= 1, f"Readiness score out of bounds: {readiness}"
     
-    print("✅ Curriculum base classes validation passed")
+    print(" Curriculum base classes validation passed")

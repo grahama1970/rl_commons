@@ -1,0 +1,282 @@
+"""RL Commons Module for claude-module-communicator integration"""
+from typing import Dict, Any, List, Optional
+from loguru import logger
+import asyncio
+from pathlib import Path
+import os
+
+# Import BaseModule from claude_coms
+try:
+    from claude_coms.base_module import BaseModule
+except ImportError:
+    # Fallback for development
+    class BaseModule:
+        def __init__(self, name, system_prompt, capabilities, registry=None):
+        # Required attributes
+        self.version = "1.0.0"
+        self.description = "Reinforcement Learning orchestration and optimization module"
+            self.name = name
+            self.system_prompt = system_prompt
+            self.capabilities = capabilities
+            self.registry = registry
+
+
+class RLCommonsModule(BaseModule):
+    """RL Commons module for orchestrating modules via claude-module-communicator"""
+    
+    def __init__(self, registry=None):
+        # Required attributes
+        self.version = "1.0.0"
+        self.description = "Reinforcement Learning orchestration and optimization module"
+        super().__init__(
+            name="rl_commons",
+            system_prompt="""You are the RL Commons orchestration module. You coordinate between different modules to optimize their performance using reinforcement learning principles.
+            
+            Your capabilities include:
+            - Orchestrating module interactions
+            - Balancing module loads
+            - Providing module recommendations
+            - Managing reward signals
+            - Coordinating training runs
+            """,
+            capabilities=[
+                {
+                    "name": "orchestrate_modules",
+                    "description": "Orchestrate interactions between modules",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "modules": {"type": "array", "items": {"type": "string"}},
+                            "task": {"type": "string"},
+                            "strategy": {"type": "string", "enum": ["round_robin", "priority", "load_balanced"]}
+                        },
+                        "required": ["modules", "task"]
+                    }
+                },
+                {
+                    "name": "get_module_recommendations",
+                    "description": "Get recommendations for module usage",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "orchestrator_id": {"type": "string"}
+                        }
+                    }
+                },
+                {
+                    "name": "update_reward_signal",
+                    "description": "Update reward signals for module performance",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "module_name": {"type": "string"},
+                            "reward": {"type": "number"},
+                            "context": {"type": "object"}
+                        },
+                        "required": ["module_name", "reward"]
+                    }
+                },
+                {
+                    "name": "start_training_run",
+                    "description": "Start a training run for optimization",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "config": {"type": "object"},
+                            "duration": {"type": "integer"}
+                        }
+                    }
+                },
+                {
+                    "name": "get_module_stats",
+                    "description": "Get performance statistics for modules",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "module_names": {"type": "array", "items": {"type": "string"}}
+                        }
+                    }
+                }
+            ],
+            registry=registry
+        )
+        
+        # Initialize internal state
+        self.orchestrators = {}
+        self.module_stats = {}
+        self.reward_history = []
+        
+    async def handle_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle incoming requests"""
+        capability = request.get("capability")
+        
+        handlers = {
+            "orchestrate_modules": self._handle_orchestrate_modules,
+            "get_module_recommendations": self._handle_get_module_recommendations,
+            "update_reward_signal": self._handle_update_reward_signal,
+            "start_training_run": self._handle_start_training_run,
+            "get_module_stats": self._handle_get_module_stats
+        }
+        
+        handler = handlers.get(capability)
+        if not handler:
+            return {
+                "success": False,
+                "module": "rl_commons",
+                "error": f"Unknown capability: {capability}"
+            }
+        
+        try:
+            result = await handler(request)
+            return {
+                "success": True,
+                "module": "rl_commons",
+                "data": result
+            }
+        except Exception as e:
+            logger.error(f"Error handling {capability}: {e}")
+            return {
+                "success": False,
+                "module": "rl_commons",
+                "error": str(e)
+            }
+    
+    async def _handle_orchestrate_modules(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Orchestrate module interactions"""
+        modules = request.get("modules", [])
+        task = request.get("task")
+        strategy = request.get("strategy", "round_robin")
+        
+        # TODO: Implement actual orchestration logic
+        # For now, return a simple orchestration plan
+        return {
+            "orchestration_plan": {
+                "task": task,
+                "modules": modules,
+                "strategy": strategy,
+                "steps": [
+                    {"module": m, "order": i} 
+                    for i, m in enumerate(modules)
+                ]
+            }
+        }
+    
+    async def _handle_get_module_recommendations(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Get module recommendations from orchestrator"""
+        orchestrator_id = request.get("orchestrator_id")
+        
+        if not orchestrator_id or orchestrator_id not in self.orchestrators:
+            # Return general recommendations
+            return {
+                "recommendations": {
+                    "rebalance_needed": False,
+                    "module_health": {},
+                    "routing_suggestions": {
+                        "preferred_modules": [],
+                        "avoid_modules": []
+                    }
+                }
+            }
+        
+        # TODO: Implement actual recommendation logic
+        return {
+            "recommendations": self.orchestrators[orchestrator_id].get("recommendations", {})
+        }
+    
+    async def _handle_update_reward_signal(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Update reward signals"""
+        module_name = request.get("module_name")
+        reward = request.get("reward")
+        context = request.get("context", {})
+        
+        # Store reward history
+        self.reward_history.append({
+            "module": module_name,
+            "reward": reward,
+            "context": context,
+            "timestamp": asyncio.get_event_loop().time()
+        })
+        
+        # Update module stats
+        if module_name not in self.module_stats:
+            self.module_stats[module_name] = {
+                "total_reward": 0,
+                "count": 0,
+                "average_reward": 0
+            }
+        
+        stats = self.module_stats[module_name]
+        stats["total_reward"] += reward
+        stats["count"] += 1
+        stats["average_reward"] = stats["total_reward"] / stats["count"]
+        
+        return {
+            "updated": True,
+            "module_stats": stats
+        }
+    
+    async def _handle_start_training_run(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Start a training run"""
+        config = request.get("config", {})
+        duration = request.get("duration", 3600)  # Default 1 hour
+        
+        # TODO: Implement actual training logic
+        # For now, return a training session ID
+        session_id = f"training_{asyncio.get_event_loop().time()}"
+        
+        return {
+            "session_id": session_id,
+            "status": "started",
+            "config": config,
+            "duration": duration
+        }
+    
+    async def _handle_get_module_stats(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Get module statistics"""
+        module_names = request.get("module_names", [])
+        
+        if not module_names:
+            # Return all stats
+            return {"stats": self.module_stats}
+        
+        # Return requested module stats
+        stats = {
+            name: self.module_stats.get(name, {})
+            for name in module_names
+        }
+        
+        return {"stats": stats}
+
+
+    async def process(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        """Process method for BaseModule compatibility"""
+        return await self.handle_request(request)
+
+    def get_input_schema(self) -> Optional[Dict[str, Any]]:
+        """Return the input schema for this module"""
+        return {
+            "type": "object",
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "enum": self.capabilities
+                },
+                "data": {
+                    "type": "object"
+                }
+            },
+            "required": ["action"]
+        }
+    
+    def get_output_schema(self) -> Optional[Dict[str, Any]]:
+        """Return the output schema for this module"""
+        return {
+            "type": "object",
+            "properties": {
+                "success": {"type": "boolean"},
+                "module": {"type": "string"},
+                "data": {"type": "object"},
+                "error": {"type": "string"}
+            },
+            "required": ["success", "module"]
+        }

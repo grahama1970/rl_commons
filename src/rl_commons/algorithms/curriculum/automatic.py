@@ -391,7 +391,7 @@ if __name__ == "__main__":
     assert stats["total_generated_tasks"] >= 0, "Task generation failed"
     assert 0 <= stats["current_focus_difficulty"] <= 1, "Invalid difficulty"
     
-    print(f"✅ Automatic curriculum validation passed")
+    print(f" Automatic curriculum validation passed")
     print(f"   Completed tasks: {stats['completed_tasks']}")
     print(f"   Current difficulty: {stats['current_focus_difficulty']:.2f}")
     print(f"   Generated tasks: {stats['total_generated_tasks']}")

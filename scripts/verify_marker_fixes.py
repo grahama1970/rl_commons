@@ -14,7 +14,7 @@ def verify_fixes():
     """Verify all 6 test fixes were applied correctly"""
     
     if not TEST_FILE.exists():
-        print(f"❌ Test file not found: {TEST_FILE}")
+        print(f" Test file not found: {TEST_FILE}")
         return False
         
     content = TEST_FILE.read_text()
@@ -51,21 +51,21 @@ def verify_fixes():
     all_good = True
     for fix in fixes:
         if fix["check"] in content:
-            print(f"✅ {fix['name']}: {fix['description']}")
+            print(f" {fix['name']}: {fix['description']}")
         else:
-            print(f"❌ {fix['name']}: Fix not found - {fix['description']}")
+            print(f" {fix['name']}: Fix not found - {fix['description']}")
             all_good = False
             
     return all_good
 
 
 if __name__ == "__main__":
-    print("🔍 Verifying Marker test fixes...")
+    print(" Verifying Marker test fixes...")
     print("-" * 40)
     
     if verify_fixes():
-        print("\n✅ All Marker test fixes verified!")
+        print("\n All Marker test fixes verified!")
         sys.exit(0)
     else:
-        print("\n❌ Some fixes are missing!")
+        print("\n Some fixes are missing!")
         sys.exit(1)

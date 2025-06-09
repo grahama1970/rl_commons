@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rl-commons"
+name = "rl_commons"
 version = "0.1.0"
 description = "Shared Reinforcement Learning components for optimizing decisions across Graham's project ecosystem"
 authors = [{name = "Graham", email = "graham@example.com"}]
@@ -53,6 +53,7 @@ dependencies = [
     # "claude-test-reporter @ git+https://github.com/grahama1970/claude-test-reporter.git@main",
     "pytest>=8.3.5",
     "pytest-json-report>=1.5.0",
+    "loguru>=0.7.3",
 ]
 
 [project.optional-dependencies]
@@ -75,12 +76,12 @@ monitoring = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/grahama1970/rl-commons"
-"Bug Reports" = "https://github.com/grahama1970/rl-commons/issues"
-"Documentation" = "https://github.com/grahama1970/rl-commons/docs"
+"Homepage" = "https://github.com/grahama1970/rl_commons"
+"Bug Reports" = "https://github.com/grahama1970/rl_commons/issues"
+"Documentation" = "https://github.com/grahama1970/rl_commons/docs"
 
 [project.scripts]
-rl-commons = "rl_commons.cli.app:main"
+rl_commons = "rl_commons.cli.app:main"
 rl-monitor = "rl_commons.monitoring.dashboard:main"
 
 [tool.setuptools.packages.find]
@@ -108,7 +109,13 @@ disallow_untyped_defs = true
 [tool.pytest.ini_options]
 minversion = "7.0"
 addopts = "-ra -q --strict-markers"
-testpaths = ["test"]
+testpaths = ["tests"]
 python_files = ["test_*.py", "*_test.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
+markers = [
+    "asyncio: mark test as an async test",
+    "slow: mark test as slow running",
+    "integration: mark test as integration test",
+    "unit: mark test as unit test",
+]

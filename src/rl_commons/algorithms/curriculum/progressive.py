@@ -332,7 +332,7 @@ if __name__ == "__main__":
     mastery = curriculum.get_mastery_levels()
     assert len(mastery) > 0, "No mastery levels recorded"
     
-    print("✅ Progressive curriculum validation passed")
+    print(" Progressive curriculum validation passed")
     print(f"   Final difficulty: {progression['current_difficulty']:.2f}")
     print(f"   Progression rate: {progression['progression_rate']:.4f}")
     print(f"   Stability: {progression['stability']:.2f}")

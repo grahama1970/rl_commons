@@ -1,0 +1,615 @@
+Look how fast that was. That's so nuts.
+
+It keeps your session open. That's
+
+killer. And it can even show you icons.
+
+Look at that. I'm using my mouse right
+
+now. Such a cool tool. This thing is
+
+kind of magic. How amazing is that? It's
+
+powerful. I mean, look at that. That's a
+
+superpower. 37 Linux commands. You will
+
+not believe the last few. Let's go.
+
+NCDU. Find out what's taking up so much
+
+space on your hard drive. It's like DF
+
+and DU, but better because it's visual
+
+and interactive. Woohoo. I can delete
+
+stuff right here.
+
+and even drill down into
+
+folders. Duff, the prettier version of
+
+DF. It shows you drive usage, but it
+
+just looks nicer. RIP Grap GP, but with
+
+coffee. Powered by Rust. It can do
+
+things like quickly finding errors in
+
+your logs. Look how fast that was. Find
+
+all your Python functions. That's so
+
+nuts. Or files that mention an API key.
+
+Seriously, it just makes Gre cry. Now,
+
+when you're traveling, you'll want to
+
+use Mosh to connect to your remote
+
+servers. Why? It's like SSH, but it
+
+supports roaming. Lose your connection,
+
+go from Wi-Fi to cellular. It keeps you
+
+connected, keeps your session open.
+
+That's killer. So, we'll jump into my
+
+remote server at Hostinger, the sponsor
+
+of this video. I forgot my password.
+
+This is embarrassing. Thankfully, I can
+
+log into my Hostinger panel and from the
+
+management console, change my password.
+
+Okay, let's see if that worked. And hold
+
+up, it doesn't work cuz I'll need mosh
+
+installed on both sides. That's how it
+
+maintains that connection. Thankfully, I
+
+can log into Hostinger in my browser
+
+terminal. Get that installed and let's
+
+try it again. Boom. So, as long as you
+
+have Mosh installed on both sides,
+
+connection maintained. Now, while we're
+
+sitting here in my Hostinger VPS, let me
+
+show you another command. This is lshw.
+
+This will show me everything I need to
+
+know about the hardware resources in my
+
+system. I mean, it shows you everything.
+
+But if you want to find out just about
+
+the CPU, we can do this. LHW do a tick
+
+C. Let's say CPU, just the CPU info. AMD
+
+epic. We can do the same thing for
+
+memory
+
+network
+
+discs. And by the way, you do get those
+
+specs for $6.99 a month. It's a whole
+
+home lab in the cloud. Host some
+
+websites, run some Docker containers,
+
+practice some Linux commands, and if you
+
+use my code network chuck, the price
+
+goes down, which is a fun feature.
+
+Picture this. Ping and trace route have
+
+a baby. That's MTR. And that was weird.
+
+This tracks latency and packet loss hop
+
+by hop live. It's amazing. FD. It's like
+
+find, but it has less letters. Also,
+
+it's better. Better default settings
+
+like searching recursively, case
+
+insensitive, ignores hidden files and
+
+directories, and it has colorized output
+
+by default, and it's often faster. FCF
+
+or FuzzyFinder, interactive filtering of
+
+any list or pipe. We can look through
+
+our history, pipe it into FCF, and we
+
+can search through it. It's really
+
+powerful when you chain commands
+
+together. Doing something crazy like
+
+this, so I can easily kill a running
+
+process.
+
+Ranger is like a gooey file manager, but
+
+it's in the terminal. It has some Vim
+
+goodness, bulk renames, previews. That's
+
+kind of awesome. I don't use CD anymore.
+
+I use Z Oxide. It's like CD, but it's
+
+more forgiving. It will look at frequent
+
+and recently used directories and rank
+
+them. Check this out. I'm in the root
+
+right now. Normally, I'd have to type in
+
+tilda for my home directory to get to
+
+downloads. But no, Z has learned me. I
+
+can simply type in downloads, and it
+
+takes me right there. If I type in ZI
+
+and hit enter, it'll actually use FCF to
+
+give me a selection of my directories
+
+interactive. I don't use ls anymore
+
+either. I use Exa. It's got better color
+
+coding, tree view built in, and it can
+
+even show you
+
+icons. Look at that. Glances is your
+
+all-in-one stat dashboard. It shows you
+
+pretty much everything from a glance.
+
+And it has a ton of options. You can run
+
+it as a web server, which I could not
+
+get to work. It didn't show me anything.
+
+But it does run an API, so you can
+
+monitor your stuff remotely. IO top. See
+
+what's stressing your discs out. It'll
+
+show you a top style list of the
+
+processes using the most dis IO. And
+
+it's updating in real time. If you want
+
+to know every single little detail about
+
+a file, look no further than stat often
+
+built into your operating system. We'll
+
+type it in, look for a file, and it
+
+tells you everything from the day it was
+
+born. I know number. And if we do -f,
+
+it'll show us file system specific
+
+information like the ID. Definitely one
+
+of the nerdier commands, but still
+
+pretty cool. Dstack. It's a combined
+
+timeline view of exactly what you want
+
+to see. CPU, RAM, disk, network, memory.
+
+Run it by itself or add some options
+
+like top CPU. This combines aspects of
+
+VM stat, IO stat, I have stat, and net
+
+stat kind of all in one. I use the watch
+
+command all the time. It reruns any
+
+command every so many seconds you set.
+
+So, I might say watch- every half a
+
+second for the
+
+Nvidia-smi command, and I can monitor my
+
+GPU cuz it's executing that command
+
+every half a second. Progress is a
+
+powerful command. Watch this. Type it in
+
+here. And right now it's showing me the
+
+progress of a secure copy happening in
+
+one of my T-Mug sessions. See, there it
+
+is right here. And I can actually type
+
+this in on the other side. Although it's
+
+kind of weird on the metrics. It can
+
+monitor the status on any one of these
+
+commands. Progress can also monitor
+
+multiple commands at once. Now, we used
+
+to use dig for DNS lookups. That's kind
+
+of messy. Dog is better. I mean, look at
+
+that. It's got some nice colors. Can do
+
+DNS over TLS. Although NASA wouldn't let
+
+me. You can output it in JSON. It's
+
+powerful. Now, you may have heard of TCP
+
+dump or even T-shark, but you know
+
+what's better? Term Shark. It's
+
+essentially a terminal user interface
+
+for T-shark. I mean, look how fun this
+
+is. I'm using my mouse right now. That's
+
+awesome. Let's filter by
+
+DNS. Oh my gosh. Is hostinger using
+
+Proxmox? Ah, this is fun to see. Let's
+
+keep that pcap. We can actually load in
+
+that pcap again. and examine
+
+it. Such a cool tool. This one might
+
+feel basic, but it's very fun.
+
+LSOF dash I. And then let's specify a
+
+port. Let's say port 22. This will show
+
+us the process that owns that port or
+
+the one that's using it. Let's check out
+
+port 80. Docker is using that one.
+
+There's something I've learned 40 times
+
+and I still forget how to do it.
+
+Subnetting. Thankfully, there's a
+
+command line tool for that. It's called
+
+IP calc. It's a quick subnet calculator
+
+that'll spit out ranges, mask, wildcard
+
+info just from using cider. Check this
+
+out. Let's do IP calc for
+
+10.7.8 94 slash. Let's do a weird one.
+
+18. All the info right there. Wormhole
+
+peer-to-peer end toend encrypted file
+
+transfer. This thing is kind of magic.
+
+With one command, I'll start to send my
+
+file, put it through a wormhole. It
+
+spits out this command. And over here in
+
+my hosting or VPS, I input that command
+
+in and start to receive. How amazing is
+
+that? Oh, by the way, that can be
+
+peer-to-peer or with a relay if you're
+
+dealing with a firewall. Why is your
+
+system starting up so slow? What's
+
+causing it? Who do we blame? We can
+
+figure it out right now. Sorry, that was
+
+a lot of energy. With the
+
+systemdanalyze command and then add
+
+blame at the end, showing you which
+
+services take the longest on the last
+
+boot up. We can also do critical chain
+
+highlighting the critical path of
+
+dependencies helping us to understand
+
+the bottlenecks caused by sequential
+
+initialization. PS I'm not using ps
+
+anymore. That was lame. I'm using proxs.
+
+It's a prettier, more friendly version
+
+of psux. I can sort by
+
+CPU. View a
+
+tree. Way better than ps. Lazy Docker is
+
+a treasure. Check this out. One command.
+
+We get an interactive terminal user
+
+interface for Docker. and you can do
+
+everything. It's probably my new
+
+favorite tool. I love RS sync for file
+
+transfers. It's smart, delta only, so it
+
+only syncs the differences. It can
+
+resume broken transfers and mirrors over
+
+SSH. Definitely the best way to copy
+
+directories or large files. Did you know
+
+that RM doesn't actually remove a file?
+
+It just unlinks it from the file system,
+
+but it's still there until it gets
+
+overwritten. If you really want it gone,
+
+you'll want to use shred. Shred
+
+overwrites a file multiple passes before
+
+it deletes, thwarting data recovery.
+
+More utils gives us more utils, like
+
+this. Use the TS command to add
+
+timestamps to anything you're doing. Use
+
+error no to find out what error numbers
+
+mean. Use if data to look at your
+
+network interfaces more simply. You get
+
+much cleaner output. Use vidir to edit
+
+your directory names and your text
+
+editor, which seems very dangerous. I'm
+
+scared. VIP allows you to insert your
+
+text editor in the middle of a Unix
+
+command pipeline and edit the data that
+
+is being piped between
+
+programs. You're going to love this one.
+
+UNP will unpack any archive. I wish I
+
+would have found this one way earlier.
+
+What it's doing under the hood is pretty
+
+fun. It actually guesses based on the
+
+archive type what the command should be.
+
+JQ is the JSON lightsaber. It will query
+
+and transform JSON output. I can do
+
+amazing oneliners using jq to grab
+
+exactly what I want to see. Getting
+
+pretty crazy with my output. Task
+
+Warrior is task management from the CLI.
+
+You really never have to leave. Check
+
+this out. We can add a task. List our
+
+tasks. How cool is that? Mark task
+
+done. It told me I have more urgent
+
+tasks. I kind of love this. I actually
+
+might start using this. Hands down the
+
+most amazing command on this list. Ask
+
+Cinema or Ask Cinema. You can record
+
+your terminal sessions into small
+
+textbased cast files. Watch this.
+
+I'm
+
+recording and I'll do some
+
+stuff. Hit control D to finish. Save it
+
+locally and we can play it back. Look at
+
+that. That's awesome. It's like it's
+
+actually in the terminal. You can pause
+
+it with the spacebar. Go in here and
+
+copy the text. Keep playing. I mean,
+
+that's so fun. You can self-host a
+
+server that you can upload these
+
+recordings to. And here's another
+
+command you can use with Aski Cinema.
+
+Ask Cinema a another tool they make will
+
+convert your command line video into a
+
+GIF or a GIF. I'm not sure how to say it
+
+anymore. That is amazing. I'm just
+
+thinking like when I want to show
+
+someone something very quick in the
+
+command line, just make a quick GIF.
+
+GIF, send it to them. Fabric. If you're
+
+not using it, you're crazy. Use the CLI
+
+to interact with AI. I've shown it
+
+before, but check this out. Combine it
+
+with the commands we already know. For
+
+example, I might pipe in my history and
+
+ask it to summarize my mostused
+
+commands. Look at that. That's a
+
+superpower. Look at your open ports, get
+
+some recommendations, use it to analyze
+
+your SIS
+
+log. And this I'm still exploring, but
+
+the possibilities are endless. Use AI or
+
+things like Olama to help you craft
+
+commands on the fly. I'm a big fan of
+
+Olama because you can run it here
+
+locally. Check this out. I'll create a
+
+custom Olama agent. Its only job is to
+
+help me create commands on the fly. And
+
+then I simply run the model and say
+
+things like create a command that will
+
+find out what is taking up all of my
+
+disc space. Look how fast that was. Or
+
+tell it to build an inmount
+
+command. It's amazing. Which command was
+
+your favorite? Comment below. Or did I
+
+miss something cool? Let us know. Share
+
+the community. And by the way, have you
+
+hacked the YouTube algorithm today? Make
+
+sure you do hit that like button,
+
+subscribe, comment, cuz you got to hack
+
+YouTube today. Ethically, of course.

@@ -1,4 +1,7 @@
-"""Core RL components"""
+"""Core RL components
+
+Module: __init__.py
+"""
 
 from .base import (
     RLState,
@@ -12,6 +15,10 @@ from .replay_buffer import (
     ReplayBuffer,
     PrioritizedReplayBuffer,
 )
+from .covariance_analyzer import (
+    CovarianceAnalyzer,
+    CovarianceMetrics,
+)
 
 __all__ = [
     "RLState",
@@ -22,4 +29,6 @@ __all__ = [
     "Experience",
     "ReplayBuffer",
     "PrioritizedReplayBuffer",
+    "CovarianceAnalyzer",
+    "CovarianceMetrics",
 ]

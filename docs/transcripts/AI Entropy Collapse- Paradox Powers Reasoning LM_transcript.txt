@@ -1,0 +1,1735 @@
+Hello community. So great that you are
+
+back. Today we talk about a new paradox
+
+that we discovered an entropy paradox in
+
+artificial intelligence. And this will
+
+open up something
+
+beautiful. We have now a new entropy
+
+collapse that we detect especially in
+
+reinforcement learning of our LLMs when
+
+we do advanced reasoning. What does this
+
+tell us? This tells us there is a new
+
+scaling law that we discovered. So no
+
+there is no wall in sight because we
+
+will talk about a new co-variance here
+
+in the entropy within artificial
+
+intelligence. Now let's talk about
+
+before we talk about the entropy
+
+collapse. What is entropy? And in my
+
+last video I already talked about an
+
+entropy probability distribution and a
+
+lot of my viewers responded and say hey
+
+what do you mean with entropy? Is this
+
+the uncertainty that we see in AI? If
+
+for example the Nvidia CEO says
+
+something or is it because the Antropic
+
+CEO tells something like massive
+
+unemployment in less than 5 years
+
+because of AI? No, nothing at all. It is
+
+also not a third if you want perspective
+
+here that is all part of an AI hype
+
+machine. No, listen. All those CEOs here
+
+that they act now as AI truth tell us
+
+here they predict the future. But you
+
+know what they are their function is as
+
+a CEO also of a salesman. So those
+
+people are trying to sell you their
+
+products and yes they have here
+
+different emotional triggers. There's
+
+this phenomenon that you are left behind
+
+if you do not invest immediately in the
+
+eye in their products. You know yes this
+
+is a phenomenon I'm not addressing at
+
+all if I talk about entropy. If I talk
+
+about entropy it is also not an human
+
+ignited chaos. No, this is just here
+
+that the social media is trying to
+
+influence you. You have here priming.
+
+They have here emotional triggers for
+
+you. I'm not talking about this.
+
+Interestingly, there are some questions
+
+by my viewers said, "Hey, but there is a
+
+counterforce to entropy in physics." No,
+
+because we do have stable atoms and
+
+maybe we have even a stable proton.
+
+Also, given the lifetime of the universe
+
+of some 100 billion years, maybe that
+
+will not be as stable. Yeah, exactly. We
+
+always have here a force and a counter
+
+force. Great idea. Yes, more publication
+
+for you to read. But what is entropy in
+
+AI before we have a look at the collapse
+
+and the new scaling laws? Now entropy in
+
+AI is beautifully explained to you in
+
+this paper two days ago published here
+
+by Shanghai AI laboratory in Chinua
+
+University May 28, 2025. and the entropy
+
+mechanism of reinforcement learning for
+
+reasoning language model like the update
+
+of the R1 model from deepseek or the 03
+
+model from openi and they say hey we
+
+found a way to overcome a major obstacle
+
+in reinforcement learning for reasoning
+
+with those LLMs namely the collapse of a
+
+policy entropy so you see the entropy
+
+term is suddenly narrowed down here to
+
+the policy entropy within reinforcement
+
+learning of reasoning language model in
+
+AI and this is the topic of today's
+
+video. Now to give you a simple
+
+explanation what is entropy in EI? It is
+
+kind of a control knob. You know you can
+
+turn it up or down how curious or how
+
+cautious your EI agent will behave in a
+
+particular scenario. So this is
+
+it. If you're a little bit more into
+
+said hey no problem we have Shannon
+
+entropy of a probability distribution.
+
+This is also the case here. We have a
+
+policy distribution over the action
+
+given here a particular state s that the
+
+system is in. And this is here the basis
+
+of reinforcement learning. So what it
+
+does it simply quantifies the
+
+uncertainty or you can call it the
+
+randomness in an agent choice about the
+
+next action. So if you have a decision
+
+process of your particular agent that
+
+has a thinking core of an LLM inside and
+
+the the next challenge is what is the
+
+next action given my particular state
+
+that I'm in. This is exactly that we
+
+need randomness. Why? Imagine all LLMs
+
+would have only one way to solve a
+
+particular problem. Everybody would do
+
+the same. It would be absolutely
+
+predictable. We would find out nothing
+
+new. we will always stick with the same
+
+old pattern. It would be boring and
+
+there would be no competition and there
+
+would be no
+
+advantages. Yeah, if you want to know
+
+more about the terms, this is easy. the
+
+probability that the policy pi takes an
+
+action a when it is in this particular
+
+state s we sum of course over all
+
+possible actions a that the system is
+
+theoretically able of we have the
+
+logarithm here of the probability this
+
+comes from information theory have mind
+
+and we compute here the expected if you
+
+want
+
+surprise the information content of the
+
+action which is exactly what entropy
+
+kind of measures shannon entropy if you
+
+would like to have a little bit more of
+
+a deep dive into AI Mathematic. I have
+
+this particular video prepared for you
+
+already. So what is now the effect? Very
+
+easy. If the policy is uncertain, the
+
+policy of our particular trained
+
+reinforcement learning is uncertain and
+
+assigns let's say equal probability to
+
+let's say four different actions. So the
+
+is not deciding hey this is the best way
+
+but everything is getting the same
+
+probability. The entropy is high. The
+
+system doesn't know what to do. But if
+
+the policy is confident and picks here
+
+the same
+
+action for let's say one particular
+
+um choice and zero for all the others
+
+the entropy is low we have no randomness
+
+the policy the LLM the agent design and
+
+this is the best way to do so you see
+
+it's a it's relatively easy entropy
+
+helps an agent explore more during the
+
+learning a higher entropy means more
+
+action variety within the decision space
+
+for this particular agent. This means we
+
+have a better exploration of new areas
+
+maybe in the vector space that you were
+
+exploring here with your terms. And if
+
+we have a lower entropy, this means we
+
+are more focused on the best known
+
+familiar actions. We have an
+
+exploitation more of the old same stuff.
+
+The main papers of today there I've
+
+chosen here two papers because at first
+
+glance they contradict each other. And
+
+this is something beautiful. So we have
+
+here the first paper I already showed
+
+you. But the second paper is now more
+
+than a week old. And you say, "Hey, a
+
+week old paper." Yes, because I was
+
+waiting for something here to happen.
+
+Anyway, it is about the University of
+
+Illinois. It is about the unreasonable
+
+effectiveness of entropy minimization in
+
+LLM reasoning. So you see both papers
+
+are exactly here reasoning in LLMs and
+
+unreasonable effectiveness entropy
+
+minimization and the entropy mechanism
+
+and they also work here with entropy
+
+minimalization but from different
+
+perspective. Have a look at
+
+this. Well you might say is entropy a
+
+special kind of your hobby right now or
+
+is it really important. Now I would like
+
+to show you some other paper also from
+
+May 29 from yesterday 2025. We have here
+
+for example University of Montreal uh
+
+stoastic gradient descent here as a free
+
+energy minimization a thermodynamic view
+
+of neural network training and they say
+
+minimize the free energy function from
+
+one of my last video balancing here the
+
+training loss and the entropy of the
+
+weight distribution. So a very
+
+interesting method. Same date May 29. We
+
+have here on policy reinforcement
+
+learning from Microsoft research with an
+
+optimal reward baseline. And they say
+
+hey we want to find here a new
+
+reinforcement learning policy and we
+
+have the idea here of an on policy
+
+reinforcement learning with a new
+
+baseline. Instead of DOPO they call it
+
+here OPPO and they have here a higher
+
+output entropy. This is what
+
+characterize the system. So you see
+
+Microsoft is doing it. Then we have here
+
+UC Berkeley and Carnegie Malan
+
+University they also from yesterday
+
+bigger regularized categorical high
+
+capacity value function in reinforcement
+
+learning remember PO are efficient
+
+multitask learner and they have here the
+
+models we a cross entropy trained or you
+
+go here to robotics and this is also
+
+from yesterday communication constraint
+
+multi-rootic entropy fieldbased
+
+exploration. Yes. Guess what?
+
+Beautifully one really interesting
+
+paper. This is a little bit older now, a
+
+week old. This is highly interesting
+
+because it analyzes the entropy on a
+
+perspective now from test time
+
+adaptation. So this is absolutely
+
+fascinating but maybe I can kind of
+
+summarize it at the end of this video.
+
+But at first we have to go here to our
+
+entropy and the entropy collab. So let's
+
+start now officially and we have here
+
+the very first paper that I showed you
+
+that I was waiting already for a week.
+
+Entropy minimization. What is it? It
+
+trains you the model to concentrate even
+
+more probability mass on the most
+
+confident outputs. So you tell the
+
+model, hey come on, be more confident,
+
+trust yourself. Yeah, I will tell you,
+
+hey, listen, I'm a pattern recognition
+
+machine. What do you want from me? So
+
+they have three new ideas they
+
+implemented and measured. So what it is
+
+they implement here now the entropy
+
+minimization for the fine-tuning the
+
+entropy minimization for the
+
+reinforcement learning and the entropy
+
+minimization for inference time
+
+computation. So highly interesting that
+
+you can go more or less on all training
+
+methodologies that we know and you might
+
+ask so what is the outcome? What did
+
+they achieved? Now for the first one
+
+here surprisingly strong performance on
+
+Mathematican and coding task and it can
+
+even outperform here labeled GPO
+
+training data. So this would be
+
+interesting reinforcement learning. They
+
+take here Q7B without any label data
+
+achieves a better performance than a
+
+strong reinforcement baseline such as
+
+GPO with 60,000 labeled examples. How is
+
+this possible that it is better than a
+
+GPO process with new data, new training
+
+data, 60,000 new examples? And for
+
+inference timing they say yeah it
+
+matches the 32 billion QN matches here
+
+or even exceeds the performance of the
+
+huge model like a GPD4 Omni from Open
+
+AI. So absolutely
+
+fascinating. Now what is the main idea
+
+that they have? They say if you do not
+
+train nothing so where does it come
+
+from? And they tell us here LLM possess
+
+here some previously
+
+underappreciated reasoning capabilities
+
+that can be effectively elicitated
+
+through some entropy minimization. So
+
+the idea is hey your system can do more
+
+than you were told. There is some hidden
+
+treasure in your system. We don't have
+
+to apply a new training step with new
+
+training data. We just take the entropy
+
+control knob and we reduce the entropy a
+
+little bit. So we have an entropy
+
+minimization in a particular way and
+
+then the system kind of trust itself a
+
+little bit more to provide the correct
+
+answer. So this is the benefit that we
+
+get. We just say to the system hey come
+
+down from your high level that you have
+
+been uptuned here to be secure to don't
+
+give any wrong answer to be here within
+
+some strict limits here of your guard
+
+rails and we say hey if we turn down the
+
+entropy maybe you still know
+
+it there were some paper before you
+
+should read this maybe reasoning with
+
+reinforced finetuning because particular
+
+in the supervised finetuning they use
+
+your part of this reinforced
+
+finetuning. Yeah, the warm-up you have
+
+supervised fine-tuning and then it
+
+employs an online reinforcement learning
+
+the PBO algorithm with an abundance of
+
+reasoning path. Beautiful. And this is
+
+more or less what you start with here in
+
+this EM fine-tuning. So you have an
+
+unsupervised finetuning directly
+
+minimizing here the token level entropy.
+
+This mirrors here supervised fine tuning
+
+and minimizes here at a token level loss
+
+on unlabelled output sample from the
+
+model condition on the input prompt.
+
+However, they say hey watch out because
+
+it's difficult. The older model
+
+especially a llama 3.18b model is not as
+
+good on this task. There is no hidden
+
+treasure to be found because this is
+
+more or less running here on optimal
+
+performance because it is rather old and
+
+not so good trained. But those newer
+
+model like a QN 2.5 unfortunately they
+
+did not train on the Q13. The 2.5
+
+there's still some, you know, some
+
+wiggle room left. We can go in, you
+
+know, we can finetune a little bit like
+
+when you finetune your car for a little
+
+bit more performance. There are still
+
+some resources left here. So they
+
+recommend here Q1 2.5 especially for
+
+mathematical reasoning
+
+tasks. Yeah, simple idea trajectory
+
+level entropy estimator but you should
+
+remember minimizing the trajectory
+
+entropy leads to policy with a lower
+
+entropy over those trajectories. Whereas
+
+minimizing here the token level entropy
+
+leads to policy with a low entropy at
+
+each single step that you generate the
+
+next token token or action level entropy
+
+estimator is this one. So you know this
+
+because our token level estimate is
+
+commonly used in the maximum entropy
+
+regularized RL frameworks such as the
+
+soft actor critique framework due to its
+
+low variance. And yes, this is exactly
+
+what I showed you in one of my last
+
+videos where we're we're looking forward
+
+to future algorithms in AI. I talked to
+
+you about the maximum entropy
+
+reinforcement learning where we have an
+
+entropy bonus added here and yeah we
+
+start here at 24 minutes here into the
+
+video and then the rest of the video I
+
+explain you here further development
+
+path.
+
+So this was the first this was here the
+
+entropy minimization fine-tuning. You
+
+minimize your token level entropy for
+
+those outputs. It's rather
+
+straightforward. Then you can do the
+
+same here. Entropy minimization on the
+
+reinforcement learning. Here it is
+
+rather easy. Your sole reward signal is
+
+the negative entropy of the generated
+
+trajectory. I just showed you the
+
+formula for this. And if we go down to
+
+inference time s time compute, you
+
+reduce the entropy of the next token's
+
+probability to distribution before you
+
+sample. And I show you more about this
+
+in a second. Now, unfortunately, the
+
+GitHub repo here has only a readmouth
+
+file. And I was waiting now for a week.
+
+The code to be released soon. I was
+
+waiting now for a week. There's no code
+
+as I publish here or record this video.
+
+So I'm a little bit disappointed because
+
+I cannot access this here and try it out
+
+myself. Not so good. So let's forget
+
+about this particular paper. Also the
+
+idea is fascinating that we still have
+
+some performance left in our LRMS we can
+
+squeeze out at no cost no training no
+
+additional whatsoever. We just have to
+
+do a little bit of an entropy
+
+minimization to the system. Okay. But
+
+the real beautiful main paper of today
+
+is here the entropy mechanism of oil in
+
+the reasoning models. Here we have a
+
+complete yeah we check at the beginning
+
+is the GitHub here and we're making this
+
+URL they go here they show here the
+
+recipes they give you here all the
+
+particular formulas they go with a dapo
+
+open source implementation that tell you
+
+exactly how to do it real nice they have
+
+here the mods everything is available
+
+for you if you ask what is this I have a
+
+particular video where I show you a
+
+development here especially based on
+
+deep gpo group relative policy
+
+optimization to dapu And then I also
+
+showed you the very next step vapo but
+
+they implement here this step of dapos.
+
+So there is here for chain of sort
+
+reasoning advanced chain of sort
+
+reasoning here the dapo mechanism
+
+explained to you in this particular
+
+video. So what happens now in this study
+
+now finally the video starts at I don't
+
+know 3 4 minutes in the question is does
+
+reinforcement learning for LLM just
+
+trade entropy for performance? what is
+
+the relation between those two path and
+
+I say okay so let's have here a
+
+validation accuracy of a particular LLM
+
+so we have here in green the test
+
+accuracy you see we have here the steps
+
+on the x-axis so test the test accuracy
+
+goes up goes up goes up and then let's
+
+say here we just have a plateau over all
+
+this we just have maximum of 5%
+
+improvement so it plateaus out no
+
+further improvement what happens at the
+
+same time if we look at the training
+
+entropy of the system. Now if you
+
+calculate the entropy you see okay we
+
+have a high entropy at the beginning we
+
+have all the ways open to us we have all
+
+solution path open unexplored but look
+
+what happens we just we breaks down we
+
+fall down here and we are my goodness
+
+here almost completely reduced and then
+
+we just have also if you want kind of
+
+plateauing out here all of this here we
+
+just have some very small variation
+
+almost nothing is happening. So within
+
+the very first steps here everything is
+
+happening. This is not what we want. We
+
+don't want a system that says hey you
+
+know in the first 500 steps I just
+
+decide on all possible reasoning path
+
+for one and then even if you do if you
+
+continue on the training I don't change
+
+at all because my if you want my
+
+physical system tells me hey it's not
+
+worth it. So something is happening here
+
+that's not okay. Look at here the
+
+entropy on the x-axis. Now you see we
+
+saturate. We immediately saturate. Here
+
+you have the Q1 2.5 model family from
+
+the 32B down to the
+
+0.5B. All models saturate almost
+
+immediately. So we are missing out. We
+
+are training those models on thousands
+
+and thousands of steps and all
+
+unnecessary because the main decision
+
+path is decided here at the very first
+
+steps and then it's just plateauing
+
+out. This is not good. This is what we
+
+call here an entropy collapse. Now if
+
+you look at this, this is simple
+
+formulas. You just put this here into a
+
+a solver, a mathematical solver. say hey
+
+give me here the define the function and
+
+the function is simply this one here. So
+
+the performance that we encounter here
+
+is simply an exponential function of the
+
+entropy plus some factors. This is it
+
+finished. We can explain the dynamic of
+
+the system. Now we know from sudden in
+
+1988 that the core challenge in
+
+reinforcement learning is this delicate
+
+balance between an exploitation and an
+
+exploration of new areas.
+
+So quantitatively the orers tell us we
+
+further reveal that without an entropy
+
+intervention like maybe we can do
+
+something with the entropy loss or we
+
+can optimize the coolback liela
+
+regularization. The downstream
+
+performance is fully predictable from
+
+the policy
+
+entropy and the fitted mathematical form
+
+function. The curve is a simple
+
+exponential function of the
+
+entropy. So you say interesting. So if
+
+we have this kind of collapse, we found
+
+a mathematical formula to explain this.
+
+Great. But we want a different solution.
+
+Yeah, because if I just go on with more
+
+like this, if we scale now the training
+
+compute time for reinforcement learning,
+
+the result is marginal. There's nothing
+
+happening here. And even if you go to
+
+20,000 steps, you will plateau out. So
+
+what to do? Yeah. And they examined this
+
+here for the QN family, for the Mistral
+
+model family, for the llama families,
+
+for the deepseek model family. They did
+
+this here on mathematical task. And they
+
+did here the same policy entropy
+
+calculation on the coding task. And they
+
+always found here the same saturation.
+
+So this is not model specific. This is
+
+not model size specific. This is just a
+
+general thing that happens whenever we
+
+use reinforcement learning. This is here
+
+the policy entropy collapses here.
+
+Why? Why does this happen? And I know a
+
+lot of my viewers want the immediate
+
+answer and the immediate answer is
+
+because of the softmax policy that
+
+implement in LLMs. The entropy change
+
+between two consecutive steps is
+
+proportional to the co-variance of the
+
+log probability and the correspondent
+
+log change for a particular action. This
+
+is the explanation.
+
+If you say, "Hey, can you make it a
+
+little bit more complicated?" Well, of
+
+course I
+
+can. This is here a paper that I found
+
+unfortunately in for me in simplified uh
+
+Chinese. And this is as far as I can
+
+tell here from Sky Down Akai here a PhD
+
+thesis on reinforcement learning theory
+
+on the internet. And here was the first
+
+time that yeah, mathematics is
+
+universal. Never mind if you don't speak
+
+the language, you have mathematics. And
+
+I said, hey, this is now an interesting
+
+deduction where came up with here with a
+
+co-variant here. And yeah, moments later
+
+I recognized, yeah, I do have a
+
+multilingual browser. So okay, I do
+
+better learn from my mistakes. So this
+
+is here why the reinforcement learning
+
+policy entropy converges in the
+
+iteration. a beautiful PhD uh thesis has
+
+not been published yet on any archive
+
+server but the insights we're going to
+
+use for our our
+
+understanding there's an entropy
+
+dynamics try to make it simple to and
+
+explain it in simple terms there's an
+
+entropy dynamics and this demonstrate
+
+that a high coariance is detrimental to
+
+a scalable reinforcement learning which
+
+provides us with guidelines about
+
+uplifting policy entropy limiting the
+
+step size of a high coariance token
+
+So what they say hey what options do we
+
+have to counteract this entropy
+
+collapse? Now if they say we want to
+
+control now the entropy what we can do
+
+and they say look we have a look at PO
+
+and we see there are two factors that we
+
+can have a modify we have the clip and
+
+we have the coolback liar divergence.
+
+What about we modify those two terms and
+
+we have a clip co-variant and a coolback
+
+libla covariant new term replacing here
+
+the classical
+
+PPO's in the loss function and this is
+
+exactly what they did now what is the
+
+effect of this and how they did it is of
+
+course the important point now this new
+
+clip coarant selects here a small
+
+portion of tokens with a positive
+
+coariance and detaches you the gradients
+
+and the Coolback liberal co-variant on
+
+the other hand applies here a particular
+
+coolback label penality on token with
+
+the largest
+
+co-variance. This is a beautiful way to
+
+actively control here the policy entropy
+
+by tuning here particular threshold
+
+parameters. So the policy model escapes
+
+now the low entropy trap. It escapes
+
+here a local minima.
+
+And this is now the beautiful thing that
+
+achieves here better performance on
+
+mathematical
+
+reasoning. So on the road to scale here
+
+the reinforcement learning performance
+
+with increased compute time we want
+
+better results. We do not want
+
+saturation. Therefore this novel path
+
+here this higher entropy class here with
+
+an entropy
+
+minimalization is providing this to us.
+
+So policy
+
+entropy beautiful formula if you have
+
+seen one of my last video you
+
+immediately understand it if not never
+
+mind this entropy quantifies here the
+
+uncertainty level of the policy on
+
+current prompts and it's widely adopted
+
+in maximum entropy reinforcement
+
+learning as a regularization term.
+
+Now interestingly we have
+
+correlation and the orers tell us we
+
+obtain here the inside that a strong
+
+positive correlation between the action
+
+probability P on action and the current
+
+policy and the corresponding advantage
+
+value A that I showed you in my last
+
+video leads to a decrease in policy
+
+entropy and controversially a negative
+
+correlation tends to increase the
+
+entropy. So they say this is
+
+interesting. So if we found this
+
+correlation between these two terms, we
+
+know now how to decrease the policy
+
+entropy. And this is here exactly what
+
+we want a policy entropy minimalization
+
+topic. Now there's a right way and a
+
+wrong way to do it. Let's stop. Let's
+
+start here with the wrong way. So
+
+classical common approach in the
+
+literature is to control the policy
+
+entropy is here to apply here correction
+
+factors to the entropy loss function
+
+itself. They did this and they had yeah
+
+it's kind of working. Look here this is
+
+the entropy on the y-axis and the number
+
+of step on the x-axis. And you see
+
+compared here to the original this is in
+
+green line here where the entropy really
+
+collapses immediately and saturates out.
+
+We have now with these new coolback lber
+
+coefficients in the loss function that
+
+we insert there we have a better
+
+performance. This is this kind of blue
+
+lines
+
+here. So it does not collapse
+
+immediately. It kind of holds on here to
+
+a particular entropy level. So we do
+
+have this uncertainty and we do have
+
+this potential to find new waves, new
+
+solution. We have this little bit of
+
+chaos, this little bit of wiggle room to
+
+find new
+
+solution. But sadly, if we look now at
+
+the accuracy and we validate the
+
+accuracy of those system that have this
+
+new potential finding new ways, you see
+
+the performance now in blue is below the
+
+one in green. So we do not achieve the
+
+result. We achieve here parttime result
+
+but the end result is not what we want.
+
+So in the end we have a degradation in
+
+the performance
+
+indicators. So it is not the way here
+
+adding here coolback lava
+
+penality in the classical way. So what
+
+is the right way to do it? Well the
+
+right way to do it you're not going to
+
+believe it is follow here the classical
+
+PO optimalization and suppress the
+
+tokens with high
+
+coariance. It sounds so easy but it's
+
+interesting. You have to find this. So
+
+here we observe that if you look at all
+
+the different tokens and we have here Q1
+
+2.5 a 7B here and you look at the coance
+
+distribution. So you have a lot of
+
+tokens that are behaving here and the
+
+mean value really beautifully but there
+
+is a little tiny fraction
+
+02% that are complete outliers. Look at
+
+this. So and they tell us now hey a
+
+small portion of tokens those were
+
+exhibit some extreme high coance far
+
+exceeding hit average. So this is saying
+
+that this outlier token take a dominant
+
+part in triggering the entropy
+
+collapse. So we know now which token
+
+trigger the collapse. So we take care
+
+about this token.
+
+No. So at first yeah there's a lot of
+
+mathematics in the original paper and
+
+especially in the annex. I just give you
+
+the result if you want to read it. It's
+
+beautiful. You have a look at the paper.
+
+So the token wise centered crossroduct
+
+between the log probability and the
+
+advantage function here is here now
+
+defined. And we have here our co-variant
+
+plus if we deduct now here we have now
+
+the clip coariant and the coolback liber
+
+co-variant formulation. As you can see
+
+here rather simple explanation they even
+
+give you here this is now the PyTo code
+
+the code if you want what you have to do
+
+if you compute here the policy loss you
+
+notice in green is here the new formula
+
+that you substitute here the classical
+
+red formula so it is really beautiful
+
+simple code if you understand what
+
+you're doing and why you're doing you
+
+found a new
+
+methodology so what is the result let's
+
+look at the entropy dynamic dynamics now
+
+with this new correct way of modifying
+
+here and try to prevent the entropy
+
+collapse and here you have on top the 7B
+
+model and here you have the 30B model
+
+and you see yeah let's look at the 30B
+
+model if you look at the entropy yes in
+
+green you have the original collapse but
+
+now with different methods you see we
+
+don't collapse we don't saturate out
+
+here at the end but there is now
+
+something beautiful we have left a
+
+little bit of this beautiful uncertainty
+
+of this beautiful chaos that we need to
+
+break out of the box and find new
+
+solution unseen unheard solution have
+
+this chaos and explore it now there are
+
+three methods and I've shown you here
+
+the coolback libl covariant the clip
+
+coariant but there's also a method here
+
+it's called clip higher now clip yeah
+
+okay this is going Show you this in a
+
+minute. Clip higher. GRPO group relative
+
+policy optimization with clip
+
+higher. This yeah it tunes the upper
+
+threshold epsilon and a PO loss to 0.28.
+
+This is here directly from the paper of
+
+Dapo. This is here the version two from
+
+May 2025 from Ban Seed and they have
+
+here Dapo. We already talked about this
+
+in one of my older videos and there they
+
+developed especially this methodology
+
+GRPO with clip higher. So they took it
+
+here from this publication. And then we
+
+have here the final benchmark data. Now
+
+we have here the QN 2.57 and the Q1
+
+2.532B for those models. We have now a
+
+lot of benchmark M24, M25, AMC, Matt
+
+500, Omnimat, Olympia, Benchmova, and
+
+the average. Great. And now for GRPO,
+
+they give us here this clip higher I
+
+just showed you. And then our new two
+
+methods that we discovered just minutes
+
+ago. Clip coariant and kubak lava
+
+coariant. Have a look at this. They
+
+color this here. So you see the bold is
+
+here. The best performance. So either
+
+it's clip coariant or clip or coolback
+
+laba covariant. One of those miles
+
+outperforms here all the other
+
+performance. And you see here for aim 25
+
+a pure JRPO gives you here 16%. If you
+
+do it with clip high you have 22%. This
+
+is real close to the clip coarant 22.7.
+
+But if you go with a cool liberant then
+
+you achieve 30 let's say percent. So you
+
+see given your particular benchmark you
+
+really have a real nice performance. on
+
+Olympia bench it is different than you
+
+have with clip coant here a better
+
+performance than with the koopa cla
+
+corons. Okay. So they tell us here these
+
+are the detailed results here on for AIM
+
+and AMC the results are average at 32.
+
+Well not perfect but okay. So what is
+
+their final result? They say our new two
+
+methods here lead here to substantial
+
+gains on the larger QN 2.532B
+
+especially. I think the same might be
+
+true for the Q13 model. And they say our
+
+methods achieves improvement up to 15%
+
+compared to GRPO on AM24 and M25
+
+respectively. and they say, "Hey, we
+
+found a 32B model has a greater
+
+potential for this um prohibitation of
+
+the entropy collapse because this model
+
+has a greater potential here from their
+
+pre-training data structure compared to
+
+the much smaller 7B model. So again, we
+
+have here another indicator. A 7B model
+
+is something beautiful. And if you have
+
+only a limited compute infrastructure,
+
+an old Nvidia GPU, a consumer GPU, I
+
+know that you are limited to the smaller
+
+size of model. But if you want to
+
+utilize here this new scaling, this new
+
+methods, well, you have to have a bigger
+
+model that has more potential and that
+
+is able really to how to say this to
+
+accumulate the benefits of this new
+
+methodology and the smaller models are
+
+not really the best choice for them.
+
+As I told you, there's a lot of
+
+mathematical deduction and this here is
+
+especially here from the PhD that I
+
+showed you here. So, if you want to have
+
+a deep dive into the deduction, how they
+
+arrived at the results that I showed
+
+you, highly recommend you the PhD thesis
+
+of our colleagues. And as you know, at
+
+the end of the video, I always give you
+
+here the original conclusion here. This
+
+is a screenshot from the study. And the
+
+authors tell us, hey, we address here
+
+the challenges of the policy entropy
+
+collapse in reinforcement learning for
+
+large model reasoning. We demonstrate
+
+the performance gains are often achieved
+
+by sacrifying here the exploratory
+
+capacity which in turn imposes a limit
+
+on improvement.
+
+So to gain a deeper understanding they
+
+conduct a theoretical investigation into
+
+the entropy dynamics and they found two
+
+simple regularization techniques clip
+
+coariance and kubc coariance to directly
+
+manage the high coariance tokens and
+
+thereby counteract the entropy collapse.
+
+Looking further reinforcement learning
+
+has been identified as the next scaling
+
+axis after the pre-training. Yes,
+
+absolutely agree. Reinforcement learning
+
+has a lot of potential here for further
+
+improving the performance of our
+
+language model. However, scaling
+
+computing for reinforcement learning
+
+requires more than an entropy
+
+minimization and they hope further
+
+research could provide valuable insights
+
+into the role of entropy fostering
+
+reinforcement learning to reach higher
+
+level of intelligence. So you see we
+
+found a new factor we found a new
+
+scale entropy in the training of our
+
+large language model of our reasoning
+
+models. And this is so interesting
+
+because if you think here entropy is
+
+just this equilibrium no as I told you
+
+you have in physics this entropy force
+
+but you also have stability islands
+
+gravitational stability islands or if
+
+you just look at the atom quantum field
+
+stability islands that counteract here
+
+this force and if you want here in
+
+artificial intelligence we have kind of
+
+the same we have a entropy collapse that
+
+we know kind know how to prevent this
+
+and establish again this beautiful
+
+equilibrium between
+
+exploitation having one solution that we
+
+know that works and now we only look at
+
+one solution and try to optimize this
+
+one solution but there's in this
+
+equilibrium also the other part that we
+
+have resources free to go new ways
+
+discover complete new areas in our
+
+mathematical spaces new solution
+
+new manifolds just say hey today I I
+
+explore here unseen territories maybe
+
+there is a better solution to the given
+
+task I really love this study it if you
+
+really want to understand it it's a
+
+little bit heavy on the mathematical
+
+side but I hope I've given you the
+
+result and explained it in a way that
+
+really opens up here and you say hey
+
+entropy in reinforcement learning is
+
+really something I should look out for
+
+in the very near future. And yeah, if
+
+you like to see more kind of this video,
+
+why not subscribe?

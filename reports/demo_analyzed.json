@@ -1,0 +1,35 @@
+{
+  "generated": "2025-06-03T11:24:14.448147",
+  "summary": {
+    "passed": 1,
+    "total": 1,
+    "collected": 1
+  },
+  "duration": 2.0831398963928223,
+  "tests": [
+    {
+      "nodeid": "test/core/test_base.py::test_rl_state_creation",
+      "outcome": "passed",
+      "duration": 0,
+      "analysis": {
+        "duration_analysis": {
+          "verdict": "FAKE",
+          "confidence": 5,
+          "reasons": [
+            "Too fast for unit test: 0.000s < 0.1s",
+            "Near-instant execution impossible for real test"
+          ],
+          "expected_range": [
+            0.1,
+            2.0
+          ]
+        },
+        "cross_examination": [
+          "Why did the test complete so quickly?",
+          "Were all iterations actually executed?"
+        ]
+      }
+    }
+  ],
+  "overall_confidence": 5.0
+}

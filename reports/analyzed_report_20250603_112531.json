@@ -1,0 +1,12 @@
+{
+  "generated": "2025-06-03T11:25:33.868760",
+  "summary": {
+    "passed": 3,
+    "total": 3,
+    "collected": 33,
+    "deselected": 30
+  },
+  "duration": 2.0940499305725098,
+  "tests": [],
+  "overall_confidence": 0.0
+}

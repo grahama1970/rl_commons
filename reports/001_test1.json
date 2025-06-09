@@ -1,0 +1,39 @@
+{
+  "generated": "2025-06-01T07:59:55.579867",
+  "summary": {
+    "passed": 1,
+    "total": 1,
+    "collected": 1
+  },
+  "duration": 21.629867553710938,
+  "tests": [
+    {
+      "nodeid": "tests/algorithms/marl/test_coordination.py::TestMultiAgentCoordination::test_multi_agent_coordination",
+      "outcome": "passed",
+      "duration": 0,
+      "analysis": {
+        "duration_analysis": {
+          "verdict": "FAKE",
+          "confidence": 5,
+          "reasons": [
+            "Too fast for coordination test: 0.000s < 2.0s",
+            "Near-instant execution impossible for real test"
+          ],
+          "expected_range": [
+            2.0,
+            10.0
+          ]
+        },
+        "cross_examination": [
+          "How many agents were actually coordinating?",
+          "What was the exact communication latency between agents?",
+          "What emergent behaviors were observed?",
+          "How many messages were exchanged?",
+          "Why did the test complete so quickly?",
+          "Were all iterations actually executed?"
+        ]
+      }
+    }
+  ],
+  "overall_confidence": 5.0
+}

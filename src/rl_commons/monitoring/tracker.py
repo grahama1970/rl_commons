@@ -1,4 +1,7 @@
-"""RL performance tracking and monitoring"""
+"""RL performance tracking and monitoring
+
+Module: tracker.py
+"""
 
 from typing import Dict, List, Any, Optional
 from collections import defaultdict, deque

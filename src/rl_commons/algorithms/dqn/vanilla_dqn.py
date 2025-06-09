@@ -1,4 +1,7 @@
-"""Deep Q-Network (DQN) implementation for sequential decision making"""
+"""Deep Q-Network (DQN) implementation for sequential decision making
+
+Module: vanilla_dqn.py
+"""
 
 import numpy as np
 import torch

@@ -1,4 +1,7 @@
-"""Proximal Policy Optimization (PPO) implementation for continuous control"""
+"""Proximal Policy Optimization (PPO) implementation for continuous control
+
+Module: ppo.py
+"""
 
 import numpy as np
 import torch
@@ -114,10 +117,10 @@ class ActorCriticNetwork(nn.Module):
         mean, std, value = self.forward(state)
         
         if self.continuous:
+            dist = Normal(mean, std)
             if deterministic:
                 action = mean
             else:
-                dist = Normal(mean, std)
                 action = dist.sample()
                 
             # Clip actions to bounds
@@ -272,7 +275,7 @@ class PPOAgent(RLAgent):
         self.batch_size = batch_size
         
         # Device
-        self.device = torch.device(device if torch.cuda.is_available() else cpu)
+        self.device = torch.device(device if torch.cuda.is_available() else 'cpu')
         
         # Network
         self.network = ActorCriticNetwork(
@@ -324,9 +327,16 @@ class PPOAgent(RLAgent):
         
         # Store for buffer if training
         if self.training and hasattr(self, '_last_state'):
+            # For discrete actions, create one-hot encoding for buffer storage
+            if self.continuous:
+                action_for_buffer = action_np
+            else:
+                action_for_buffer = np.zeros(self.action_dim, dtype=np.float32)
+                action_for_buffer[int(action_np)] = 1.0
+            
             self.rollout_buffer.add(
                 self._last_state.features,
-                action_np if self.continuous else np.array([action_np]),
+                action_for_buffer,
                 0.0,  # Reward will be updated in update method
                 value_np,
                 log_prob_np,
@@ -423,7 +433,9 @@ class PPOAgent(RLAgent):
             else:
                 probs = F.softmax(mean, dim=-1)
                 dist = Categorical(probs)
-                log_probs = dist.log_prob(batch['actions'].squeeze(-1))
+                # Convert one-hot actions back to indices
+                action_indices = torch.argmax(batch['actions'], dim=-1)
+                log_probs = dist.log_prob(action_indices)
                 entropy = dist.entropy().mean()
             
             # PPO loss

@@ -1,0 +1,199 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.5, pluggy-1.6.0
+rootdir: /home/graham/workspace/experiments/rl_commons
+configfile: pyproject.toml
+plugins: metadata-3.1.1, json-report-1.5.0, anyio-4.9.0
+collected 157 items
+
+tests/algorithms/a3c/test_a3c.py ...FFFFF.                               [  5%]
+tests/algorithms/a3c/test_a3c_simple.py .                                [  6%]
+tests/algorithms/curriculum/test_curriculum.py .......F.......F..FF.     [ 19%]
+tests/algorithms/gnn/test_gnn_integration.py ..FF                        [ 22%]
+tests/algorithms/irl/test_irl.py FF.FF..                                 [ 26%]
+tests/algorithms/marl/test_coordination.py F.F                           [ 28%]
+tests/algorithms/meta/test_maml.py FFFF                                  [ 31%]
+tests/algorithms/morl/test_entropy_aware_morl.py ......                  [ 35%]
+tests/algorithms/ppo/test_entropy_aware_ppo.py FFFFFF                    [ 38%]
+tests/algorithms/ppo/test_kl_cov_ppo.py FFFFFF                           [ 42%]
+tests/algorithms/ppo/test_ppo.py FF                                      [ 43%]
+tests/benchmarks/test_benchmarks.py ....FFFFFF.F..                       [ 52%]
+tests/core/test_algorithm_selector.py ........FFF.FFFF...FFF.            [ 67%]
+tests/core/test_base.py ....                                             [ 70%]
+tests/core/test_covariance_analyzer.py .......F                          [ 75%]
+tests/core/test_entropy_aware_selector.py FFFFFF                         [ 78%]
+tests/integrations/test_arangodb_optimizer.py FF.FFFFF.                  [ 84%]
+tests/integrations/test_module_communicator_integration.py FFFFFFFsFFFF. [ 92%]
+..FF                                                                     [ 95%]
+tests/monitoring/test_entropy_tracker.py FFF.F.F                         [100%]
+
+=============================== warnings summary ===============================
+tests/algorithms/a3c/test_a3c.py::test_a3c_integration
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/a3c/test_a3c.py::test_a3c_integration returned 1, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/a3c/test_a3c_simple.py::test_a3c_components
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/a3c/test_a3c_simple.py::test_a3c_components returned 1, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/curriculum/test_curriculum.py::TestMetaCurriculum::test_domain_adaptation
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/torch/autograd/graph.py:824: UserWarning: Using backward() with create_graph=True will create a reference cycle between the parameter and its gradient which can cause a memory leak. We recommend using autograd.grad when creating the graph to avoid this. If you have to use this function, make sure to reset the .grad fields of your parameters to None after use to break the cycle and avoid the leak. (Triggered internally at /pytorch/torch/csrc/autograd/engine.cpp:1273.)
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+
+tests/algorithms/gnn/test_gnn_integration.py::TestGNNIntegration::test_module_graph_forward
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/gnn/test_gnn_integration.py::TestGNNIntegration::test_module_graph_forward returned {'duration': 0.044440507888793945, 'num_modules': 10, 'num_edges': 30, 'embedding_dim': 128, 'forward_time': 0.044440507888793945, 'graph_stats': {'num_nodes': 10, 'num_edges': 30, 'density': 0.3333333333333333, 'avg_degree': np.float64(6.0), 'max_degree': 10, 'min_degree': 2, 'num_updates': 25}}, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/gnn/test_gnn_integration.py::TestGNNIntegration::test_dynamic_graph
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/gnn/test_gnn_integration.py::TestGNNIntegration::test_dynamic_graph returned {'duration': 0.004242658615112305, 'modules_added': 35, 'modules_removed': 7, 'edges_modified': 97, 'final_num_nodes': 28, 'final_num_edges': 130, 'graph_density': 0.17195767195767195, 'avg_degree': np.float64(9.285714285714286), 'total_updates': 167, 'avg_update_time': np.float64(5.4655756269182475e-05), 'max_update_time': np.float64(0.0004837512969970703)}, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/irl/test_irl.py::TestBehavioralCloning::test_imitate_routing_policy
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/irl/test_irl.py::TestBehavioralCloning::test_imitate_routing_policy returned {'duration': 2.000436544418335, 'train_accuracy': 0.5645833333333333, 'val_accuracy': 0.5583333333333333, 'test_accuracy': 0.62, 'final_train_loss': 0.9255485653877258, 'epochs_trained': 50}, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/irl/test_irl.py::TestHoneypot::test_wrong_action_space
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/irl/test_irl.py::TestHoneypot::test_wrong_action_space returned {'status': 'FAKE', 'reason': 'Wrong action space should fail'}, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/irl/test_irl.py::TestHoneypot::test_empty_demonstrations
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+    return _methods._mean(a, axis=axis, dtype=dtype,
+
+tests/algorithms/irl/test_irl.py::TestHoneypot::test_empty_demonstrations
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+    ret = ret.dtype.type(ret / rcount)
+
+tests/algorithms/irl/test_irl.py::TestHoneypot::test_empty_demonstrations
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/irl/test_irl.py::TestHoneypot::test_empty_demonstrations returned {'status': 'FAKE', 'reason': 'Empty demonstrations should fail'}, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/marl/test_coordination.py::TestMultiAgentCoordination::test_multi_agent_coordination
+  /home/graham/workspace/experiments/rl_commons/src/rl_commons/algorithms/marl/independent_q.py:182: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+    states = torch.FloatTensor([b['obs'] for b in batch]).to(self.device)
+
+tests/algorithms/marl/test_coordination.py::TestMultiAgentCoordination::test_agent_communication
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/marl/test_coordination.py::TestMultiAgentCoordination::test_agent_communication returned {'duration': 0.005647420883178711, 'num_agents': 4, 'messages_sent': 20, 'messages_received': 130, 'broadcast_messages': 10, 'burst_sent': 100, 'burst_dropped': 0, 'burst_duration': 0.0002484321594238281, 'total_messages': 130, 'total_dropped': 0, 'drop_rate': 0.0}, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/morl/test_entropy_aware_morl.py::test_entropy_as_objective
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/morl/test_entropy_aware_morl.py::test_entropy_as_objective returned True, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/morl/test_entropy_aware_morl.py::test_pareto_with_entropy
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/morl/test_entropy_aware_morl.py::test_pareto_with_entropy returned True, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/morl/test_entropy_aware_morl.py::test_entropy_weight_adaptation
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/morl/test_entropy_aware_morl.py::test_entropy_weight_adaptation returned True, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/morl/test_entropy_aware_morl.py::test_entropy_preference_balance
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/morl/test_entropy_aware_morl.py::test_entropy_preference_balance returned True, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/algorithms/morl/test_entropy_aware_morl.py::test_metrics_reporting
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/algorithms/morl/test_entropy_aware_morl.py::test_metrics_reporting returned True, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/integrations/test_arangodb_optimizer.py::test_integration_validation
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/integrations/test_arangodb_optimizer.py::test_integration_validation returned 1, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?
+    warnings.warn(
+
+tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_async_request_handling
+  /home/graham/workspace/experiments/rl_commons/.venv/lib/python3.12/site-packages/_pytest/python.py:148: PytestUnhandledCoroutineWarning: async def functions are not natively supported and have been skipped.
+  You need to install a suitable plugin for your async framework, for example:
+    - anyio
+    - pytest-asyncio
+    - pytest-tornasync
+    - pytest-trio
+    - pytest-twisted
+    warnings.warn(PytestUnhandledCoroutineWarning(msg.format(nodeid)))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] .venv/lib/python3.12/site-packages/_pytest/python.py:149: async def function and no async plugin installed (see warnings)
+FAILED tests/algorithms/a3c/test_a3c.py::TestA3CAgent::test_agent_initialization
+FAILED tests/algorithms/a3c/test_a3c.py::TestA3CAgent::test_action_selection_discrete
+FAILED tests/algorithms/a3c/test_a3c.py::TestA3CAgent::test_action_selection_continuous
+FAILED tests/algorithms/a3c/test_a3c.py::TestA3CAgent::test_save_load - Attri...
+FAILED tests/algorithms/a3c/test_a3c.py::TestA3CAgent::test_metrics - Attribu...
+FAILED tests/algorithms/curriculum/test_curriculum.py::TestAutomaticCurriculum::test_performance_based_selection
+FAILED tests/algorithms/curriculum/test_curriculum.py::TestMetaCurriculum::test_meta_task_generation
+FAILED tests/algorithms/curriculum/test_curriculum.py::TestMetaCurriculum::test_meta_update_scheduling
+FAILED tests/algorithms/curriculum/test_curriculum.py::TestIntegration::test_curriculum_with_real_agent
+FAILED tests/algorithms/gnn/test_gnn_integration.py::TestGNNDQNIntegration::test_gnn_dqn_learning
+FAILED tests/algorithms/gnn/test_gnn_integration.py::TestHoneypot::test_static_graph
+FAILED tests/algorithms/irl/test_irl.py::TestMaxEntropyIRL::test_learn_module_routing
+FAILED tests/algorithms/irl/test_irl.py::TestMaxEntropyIRL::test_reward_function_properties
+FAILED tests/algorithms/irl/test_irl.py::TestBehavioralCloning::test_continuous_action_cloning
+FAILED tests/algorithms/irl/test_irl.py::TestGAIL::test_discriminator_training
+FAILED tests/algorithms/marl/test_coordination.py::TestMultiAgentCoordination::test_multi_agent_coordination
+FAILED tests/algorithms/marl/test_coordination.py::TestHoneypot::test_fake_multi_agent
+FAILED tests/algorithms/meta/test_maml.py::TestMAML::test_few_shot_adaptation
+FAILED tests/algorithms/meta/test_maml.py::TestMAML::test_meta_training - Ass...
+FAILED tests/algorithms/meta/test_maml.py::TestMAMLAgent::test_maml_agent_adaptation
+FAILED tests/algorithms/meta/test_maml.py::TestHoneypot::test_no_adaptation
+FAILED tests/algorithms/ppo/test_entropy_aware_ppo.py::test_cartpole_training
+FAILED tests/algorithms/ppo/test_entropy_aware_ppo.py::test_gradient_detachment
+FAILED tests/algorithms/ppo/test_entropy_aware_ppo.py::test_fake_instant_convergence
+FAILED tests/algorithms/ppo/test_entropy_aware_ppo.py::test_asymmetric_clipping
+FAILED tests/algorithms/ppo/test_entropy_aware_ppo.py::test_adaptive_entropy_coefficient
+FAILED tests/algorithms/ppo/test_entropy_aware_ppo.py::test_entropy_preservation
+FAILED tests/algorithms/ppo/test_kl_cov_ppo.py::test_kl_penalty - NameError: ...
+FAILED tests/algorithms/ppo/test_kl_cov_ppo.py::test_entropy_preservation - N...
+FAILED tests/algorithms/ppo/test_kl_cov_ppo.py::test_fake_zero_kl - NameError...
+FAILED tests/algorithms/ppo/test_kl_cov_ppo.py::test_kl_scaling_by_covariance
+FAILED tests/algorithms/ppo/test_kl_cov_ppo.py::test_dynamic_kl_adaptation - ...
+FAILED tests/algorithms/ppo/test_kl_cov_ppo.py::test_comparison_with_clip_cov
+FAILED tests/algorithms/ppo/test_ppo.py::test_ppo_continuous - AttributeError...
+FAILED tests/algorithms/ppo/test_ppo.py::test_ppo_discrete - AttributeError: ...
+FAILED tests/benchmarks/test_benchmarks.py::TestBenchmarkSuite::test_benchmark_comparison
+FAILED tests/benchmarks/test_benchmarks.py::TestBenchmarkSuite::test_report_generation
+FAILED tests/benchmarks/test_benchmarks.py::TestAlgorithmBenchmarks::test_algorithm_benchmark_setup
+FAILED tests/benchmarks/test_benchmarks.py::TestAlgorithmBenchmarks::test_multi_objective_benchmark
+FAILED tests/benchmarks/test_benchmarks.py::TestAlgorithmBenchmarks::test_scalability_benchmark
+FAILED tests/benchmarks/test_benchmarks.py::TestIntegrationBenchmarks::test_module_orchestration_benchmark
+FAILED tests/benchmarks/test_benchmarks.py::TestPerformanceProfiler::test_nested_profiling
+FAILED tests/core/test_algorithm_selector.py::TestAlgorithmSelector::test_algorithm_selection_discrete
+FAILED tests/core/test_algorithm_selector.py::TestAlgorithmSelector::test_algorithm_selection_continuous
+FAILED tests/core/test_algorithm_selector.py::TestAlgorithmSelector::test_force_algorithm_selection
+FAILED tests/core/test_algorithm_selector.py::TestAlgorithmSelector::test_performance_tracking
+FAILED tests/core/test_algorithm_selector.py::TestAlgorithmSelector::test_algorithm_switching
+FAILED tests/core/test_algorithm_selector.py::TestAlgorithmSelector::test_save_load_performance_history
+FAILED tests/core/test_algorithm_selector.py::TestAlgorithmSelector::test_statistics
+FAILED tests/core/test_algorithm_selector.py::TestEdgeCases::test_empty_algorithm_registry
+FAILED tests/core/test_algorithm_selector.py::TestEdgeCases::test_invalid_force_algorithm
+FAILED tests/core/test_algorithm_selector.py::TestEdgeCases::test_performance_with_zero_episodes
+FAILED tests/core/test_covariance_analyzer.py::test_real_rl_scenario - Assert...
+FAILED tests/core/test_entropy_aware_selector.py::test_entropy_aware_selection
+FAILED tests/core/test_entropy_aware_selector.py::test_entropy_health_tracking
+FAILED tests/core/test_entropy_aware_selector.py::test_algorithm_switching - ...
+FAILED tests/core/test_entropy_aware_selector.py::test_intervention_recommendations
+FAILED tests/core/test_entropy_aware_selector.py::test_entropy_statistics - N...
+FAILED tests/core/test_entropy_aware_selector.py::test_fake_always_healthy - ...
+FAILED tests/integrations/test_arangodb_optimizer.py::TestArangoDBOptimizer::test_optimizer_initialization
+FAILED tests/integrations/test_arangodb_optimizer.py::TestArangoDBOptimizer::test_state_creation
+FAILED tests/integrations/test_arangodb_optimizer.py::TestArangoDBOptimizer::test_optimization_step
+FAILED tests/integrations/test_arangodb_optimizer.py::TestArangoDBOptimizer::test_reward_calculation
+FAILED tests/integrations/test_arangodb_optimizer.py::TestArangoDBOptimizer::test_reward_with_degradation
+FAILED tests/integrations/test_arangodb_optimizer.py::TestArangoDBOptimizer::test_full_optimization_loop
+FAILED tests/integrations/test_arangodb_optimizer.py::TestArangoDBOptimizer::test_save_load_model
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_module_registration
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_orchestrator_creation
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_module_state_update
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_request_routing
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_performance_tracking
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_multi_objective_orchestration
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_should_rebalance
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_curriculum_creation
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_multi_agent_setup
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_gnn_orchestrator
+FAILED tests/integrations/test_module_communicator_integration.py::TestModuleCommunicatorIntegration::test_integration_statistics
+FAILED tests/integrations/test_module_communicator_integration.py::TestE2EIntegration::test_e2e_pdf_processing_pipeline
+FAILED tests/integrations/test_module_communicator_integration.py::TestE2EIntegration::test_algorithm_switching
+FAILED tests/monitoring/test_entropy_tracker.py::test_ppo_entropy_tracking - ...
+FAILED tests/monitoring/test_entropy_tracker.py::test_collapse_detection - as...
+FAILED tests/monitoring/test_entropy_tracker.py::test_fake_constant_entropy
+FAILED tests/monitoring/test_entropy_tracker.py::test_recovery_recommendations
+FAILED tests/monitoring/test_entropy_tracker.py::test_real_ppo_integration - ...
+============ 84 failed, 72 passed, 1 skipped, 19 warnings in 35.74s ============

@@ -362,4 +362,4 @@ if __name__ == "__main__":
     # Update with feedback
     optimizer.update_with_feedback(state, action, improved_metrics, new_params)
     
-    print("✅ ArangoDBOptimizer validation passed")
+    print(" ArangoDBOptimizer validation passed")

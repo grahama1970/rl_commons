@@ -10,13 +10,13 @@ Shared Reinforcement Learning components for optimizing decisions across Graham'
 - **Hierarchical RL**: For complex orchestration (claude-module-communicator)
 - **PPO/A3C**: For continuous optimization (arangodb, sparta)
 
-### Advanced Techniques (In Development)
-- **Multi-Agent RL (MARL)**: Decentralized module coordination
-- **Graph Neural Networks**: Topology-aware decision making
-- **Meta-Learning (MAML)**: Rapid adaptation to new modules
-- **Inverse RL (IRL)**: Learning from expert demonstrations
-- **Multi-Objective RL (MORL)**: Balancing competing goals
-- **Curriculum Learning**: Progressive task complexity
+### Advanced Techniques ✅
+- **Multi-Agent RL (MARL)**: Decentralized module coordination with communication
+- **Graph Neural Networks (GNN)**: Topology-aware decision making for module networks
+- **Meta-Learning (MAML)**: Rapid adaptation to new modules (5-10 gradient steps)
+- **Inverse RL (IRL)**: Learning from expert demonstrations and human feedback
+- **Multi-Objective RL (MORL)**: Balancing latency, throughput, and cost
+- **Curriculum Learning**: Progressive task complexity for robust training
 
 ### Infrastructure
 - **Automatic Algorithm Selection**: Intelligently choose the best RL approach
@@ -36,6 +36,37 @@ pip install git+https://github.com/grahama1970/rl-commons.git
 ```
 
 ## 🎯 Quick Start
+
+### Automatic Algorithm Selection
+```python
+from rl_commons.core.algorithm_selector import AlgorithmSelector, TaskProperties
+
+# Let RL Commons choose the best algorithm
+selector = AlgorithmSelector()
+task_props = TaskProperties(
+    action_space="discrete",
+    state_dim=10,
+    action_dim=4,
+    requires_stability=True
+)
+agent = selector.select_algorithm(task_props)
+```
+
+### Module Orchestration with MORL
+```python
+from rl_commons.integrations import ModuleCommunicatorIntegration
+
+# Setup module orchestration
+integration = ModuleCommunicatorIntegration()
+integration.register_module("marker", "pdf_processor", {"file_types": ["pdf"]})
+integration.register_module("arangodb", "database", {"operations": ["store", "query"]})
+
+# Create multi-objective orchestrator
+orchestrator = integration.create_orchestrator(
+    modules=["marker", "arangodb"],
+    use_multi_objective=True  # Balance latency, throughput, reliability
+)
+```
 
 ### Provider Selection (Contextual Bandit)
 ```python

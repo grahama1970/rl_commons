@@ -437,7 +437,7 @@ if __name__ == "__main__":
     assert "preferred_task_types" in insights, "Missing task preferences"
     assert len(insights["preferred_task_types"]) > 0, "No task preferences learned"
     
-    print("✅ Adaptive curriculum validation passed")
+    print(" Adaptive curriculum validation passed")
     print(f"   Learning rate: {insights['learning_rate']:.2f}")
     print(f"   Consistency: {insights['consistency']:.2f}")
     print(f"   Task preferences: {insights['preferred_task_types']}")

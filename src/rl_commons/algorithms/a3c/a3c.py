@@ -486,7 +486,7 @@ class A3CAgent(RLAgent):
             config: A3C configuration
             device: Device to use
         """
-        super().__init__(name)
+        super().__init__(name, config or {})
         
         self.state_dim = state_dim
         self.action_dim = action_dim

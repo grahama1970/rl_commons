@@ -1,4 +1,7 @@
-"""Contextual Bandit implementation for provider/strategy selection"""
+"""Contextual Bandit implementation for provider/strategy selection
+
+Module: contextual.py
+"""
 
 import numpy as np
 from typing import List, Dict, Any, Optional, Tuple
@@ -64,7 +67,7 @@ class ContextualBandit(RLAgent):
         Returns:
             Selected action
         """
-        context = state.features
+        context = np.array(state.features)
         
         # Ensure context has correct dimension
         if len(context) != self.n_features:
@@ -125,7 +128,7 @@ class ContextualBandit(RLAgent):
         Returns:
             Training metrics
         """
-        context = state.features
+        context = np.array(state.features)
         arm = action.action_id
         r = reward.value
         

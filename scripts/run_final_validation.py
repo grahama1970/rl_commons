@@ -32,7 +32,7 @@ def run_command(cmd, cwd=None, timeout=300):
 def validate_completed_work():
     """Validate all completed tasks"""
     print("=" * 80)
-    print("🚀 RL COMMONS FINAL VALIDATION REPORT")
+    print(" RL COMMONS FINAL VALIDATION REPORT")
     print("=" * 80)
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
@@ -49,7 +49,7 @@ def validate_completed_work():
     
     # Task 1: Marker Test Fixes
     print("\n" + "=" * 60)
-    print("📋 TASK 1: Marker Test Fixes")
+    print(" TASK 1: Marker Test Fixes")
     print("=" * 60)
     
     results["summary"]["total_tasks"] += 1
@@ -61,7 +61,7 @@ def validate_completed_work():
     )
     
     if "All Marker test fixes verified" in output:
-        print("✅ Status: COMPLETED AND VERIFIED")
+        print(" Status: COMPLETED AND VERIFIED")
         task1_result["status"] = "verified"
         results["summary"]["completed"] += 1
         results["summary"]["validated"] += 1
@@ -76,7 +76,7 @@ def validate_completed_work():
     
     # Task 2: PPO Implementation
     print("\n" + "=" * 60)
-    print("📋 TASK 2: PPO Algorithm Implementation")
+    print(" TASK 2: PPO Algorithm Implementation")
     print("=" * 60)
     
     results["summary"]["total_tasks"] += 1
@@ -89,15 +89,15 @@ def validate_completed_work():
     )
     
     if success and "PPO continuous test completed successfully" in output:
-        print("✅ Status: COMPLETED AND VERIFIED")
-        print("   - Continuous action space: ✓")
-        print("   - Discrete action space: ✓")
-        print("   - Save/Load functionality: ✓")
+        print(" Status: COMPLETED AND VERIFIED")
+        print("   - Continuous action space: ")
+        print("   - Discrete action space: ")
+        print("   - Save/Load functionality: ")
         task2_result["status"] = "verified"
         results["summary"]["completed"] += 1
         results["summary"]["validated"] += 1
     else:
-        print("❌ Status: FAILED VALIDATION")
+        print(" Status: FAILED VALIDATION")
         task2_result["status"] = "failed"
         task2_result["details"]["error"] = error
         results["summary"]["failed"] += 1
@@ -106,7 +106,7 @@ def validate_completed_work():
     
     # Task 3: ArangoDB Integration
     print("\n" + "=" * 60)
-    print("📋 TASK 3: ArangoDB PPO Integration")
+    print(" TASK 3: ArangoDB PPO Integration")
     print("=" * 60)
     
     results["summary"]["total_tasks"] += 1
@@ -118,17 +118,17 @@ def validate_completed_work():
         cwd=Path(__file__).parent
     )
     
-    if success and "✅ ArangoDBOptimizer validation passed" in output:
-        print("✅ Status: COMPLETED AND VERIFIED")
-        print("   - 8-dimensional state space: ✓")
-        print("   - 4 continuous parameters: ✓")
-        print("   - Reward function: ✓")
-        print("   - Example working: ✓")
+    if success and " ArangoDBOptimizer validation passed" in output:
+        print(" Status: COMPLETED AND VERIFIED")
+        print("   - 8-dimensional state space: ")
+        print("   - 4 continuous parameters: ")
+        print("   - Reward function: ")
+        print("   - Example working: ")
         task3_result["status"] = "verified"
         results["summary"]["completed"] += 1
         results["summary"]["validated"] += 1
     else:
-        print("❌ Status: FAILED VALIDATION")
+        print(" Status: FAILED VALIDATION")
         task3_result["status"] = "failed"
         task3_result["details"]["error"] = error
         results["summary"]["failed"] += 1
@@ -137,7 +137,7 @@ def validate_completed_work():
     
     # Task 4: A3C Implementation
     print("\n" + "=" * 60)
-    print("📋 TASK 4: A3C Algorithm for Sparta")
+    print(" TASK 4: A3C Algorithm for Sparta")
     print("=" * 60)
     
     results["summary"]["total_tasks"] += 1
@@ -150,17 +150,17 @@ def validate_completed_work():
     )
     
     if success and "ALL TESTS PASSED" in output:
-        print("✅ Status: COMPLETED AND VERIFIED")
-        print("   - Actor-Critic Network: ✓")
-        print("   - Continuous actions: ✓")
-        print("   - Discrete actions: ✓")
-        print("   - Save/Load: ✓")
-        print("   - Sparta example created: ✓")
+        print(" Status: COMPLETED AND VERIFIED")
+        print("   - Actor-Critic Network: ")
+        print("   - Continuous actions: ")
+        print("   - Discrete actions: ")
+        print("   - Save/Load: ")
+        print("   - Sparta example created: ")
         task4_result["status"] = "verified"
         results["summary"]["completed"] += 1
         results["summary"]["validated"] += 1
     else:
-        print("❌ Status: FAILED VALIDATION")
+        print(" Status: FAILED VALIDATION")
         task4_result["status"] = "failed"
         task4_result["details"]["error"] = error
         results["summary"]["failed"] += 1
@@ -169,7 +169,7 @@ def validate_completed_work():
     
     # Task 5: Module Communicator Integration
     print("\n" + "=" * 60)
-    print("📋 TASK 5: Claude-Module-Communicator Integration")
+    print(" TASK 5: Claude-Module-Communicator Integration")
     print("=" * 60)
     
     results["summary"]["total_tasks"] += 1
@@ -178,10 +178,10 @@ def validate_completed_work():
     # Check if example exists
     example_path = Path(__file__).parent / "examples" / "module_communicator_integration.py"
     if example_path.exists():
-        print("✅ Status: COMPLETED")
-        print("   - Hierarchical RL integration: ✓")
-        print("   - Multiple module types: ✓")
-        print("   - Workflow orchestration: ✓")
+        print(" Status: COMPLETED")
+        print("   - Hierarchical RL integration: ")
+        print("   - Multiple module types: ")
+        print("   - Workflow orchestration: ")
         task5_result["status"] = "completed"
         results["summary"]["completed"] += 1
         
@@ -190,13 +190,13 @@ def validate_completed_work():
             spec = importlib.util.spec_from_file_location("module_comm", example_path)
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
-            print("   - Example validates: ✓")
+            print("   - Example validates: ")
             results["summary"]["validated"] += 1
             task5_result["status"] = "verified"
         except Exception as e:
             print(f"   - Example validation failed: {e}")
     else:
-        print("❌ Status: NOT FOUND")
+        print(" Status: NOT FOUND")
         task5_result["status"] = "failed"
         results["summary"]["failed"] += 1
         
@@ -204,7 +204,7 @@ def validate_completed_work():
     
     # Task 6: Documentation
     print("\n" + "=" * 60)
-    print("📋 TASK 6: Documentation and Examples")
+    print(" TASK 6: Documentation and Examples")
     print("=" * 60)
     
     results["summary"]["total_tasks"] += 1
@@ -224,9 +224,9 @@ def validate_completed_work():
     
     for doc_file, desc in doc_files:
         if (Path(__file__).parent / doc_file).exists():
-            docs_completed.append(f"{desc}: ✓")
+            docs_completed.append(f"{desc}: ")
         else:
-            docs_missing.append(f"{desc}: ✗")
+            docs_missing.append(f"{desc}: ")
             
     if docs_missing:
         print("⚠️  Status: PARTIALLY COMPLETED")
@@ -236,7 +236,7 @@ def validate_completed_work():
             print(f"   {doc}")
         task6_result["status"] = "partial"
     else:
-        print("✅ Status: COMPLETED")
+        print(" Status: COMPLETED")
         for doc in docs_completed:
             print(f"   {doc}")
         task6_result["status"] = "verified"
@@ -247,7 +247,7 @@ def validate_completed_work():
     
     # Import validation
     print("\n" + "=" * 60)
-    print("📦 IMPORT VALIDATION")
+    print(" IMPORT VALIDATION")
     print("=" * 60)
     
     import_tests = [
@@ -266,14 +266,14 @@ def validate_completed_work():
     for module_name, desc in import_tests:
         try:
             importlib.import_module(module_name)
-            print(f"   ✓ {desc}")
+            print(f"    {desc}")
         except Exception as e:
-            print(f"   ✗ {desc}: {e}")
+            print(f"    {desc}: {e}")
             all_imports_ok = False
             
     # Final Summary
     print("\n" + "=" * 80)
-    print("📊 FINAL SUMMARY")
+    print(" FINAL SUMMARY")
     print("=" * 80)
     
     print(f"\nTotal Tasks: {results['summary']['total_tasks']}")
@@ -281,15 +281,15 @@ def validate_completed_work():
     print(f"Validated: {results['summary']['validated']} ({results['summary']['validated']/results['summary']['total_tasks']*100:.0f}%)")
     print(f"Failed: {results['summary']['failed']}")
     
-    print("\n🎯 Key Achievements:")
-    print("   ✅ PPO algorithm fully implemented and tested")
-    print("   ✅ A3C algorithm implemented for distributed systems")
-    print("   ✅ ArangoDB integration with parameter optimization")
-    print("   ✅ Hierarchical RL for module orchestration")
-    print("   ✅ Comprehensive examples for all integrations")
-    print("   ✅ All imports working correctly" if all_imports_ok else "   ⚠️  Some import issues")
+    print("\n Key Achievements:")
+    print("    PPO algorithm fully implemented and tested")
+    print("    A3C algorithm implemented for distributed systems")
+    print("    ArangoDB integration with parameter optimization")
+    print("    Hierarchical RL for module orchestration")
+    print("    Comprehensive examples for all integrations")
+    print("    All imports working correctly" if all_imports_ok else "   ⚠️  Some import issues")
     
-    print("\n📝 Remaining Tasks:")
+    print("\n Remaining Tasks:")
     print("   - Test ArangoDB integration with real database")
     print("   - Create performance benchmarks")
     print("   - Complete Marker test fixes (3 of 6 verified)")
@@ -301,11 +301,11 @@ def validate_completed_work():
     with open(report_path, 'w') as f:
         json.dump(results, f, indent=2)
         
-    print(f"\n📄 Detailed report saved to: {report_path}")
+    print(f"\n Detailed report saved to: {report_path}")
     
     # Return exit code based on validation
     if results['summary']['failed'] == 0 and results['summary']['validated'] >= 4:
-        print("\n✅ VALIDATION PASSED - All major tasks completed successfully!")
+        print("\n VALIDATION PASSED - All major tasks completed successfully!")
         return 0
     else:
         print("\n⚠️  VALIDATION INCOMPLETE - Some tasks need attention")

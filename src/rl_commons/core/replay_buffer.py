@@ -1,4 +1,7 @@
-"""Experience replay buffer for RL algorithms"""
+"""Experience replay buffer for RL algorithms
+
+Module: replay_buffer.py
+"""
 
 from collections import deque
 from typing import List, Tuple, Optional, Dict, Any
