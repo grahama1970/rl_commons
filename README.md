@@ -4,10 +4,22 @@ Shared Reinforcement Learning components for optimizing decisions across Graham'
 
 ## 🚀 Features
 
+### Core Algorithms
 - **Contextual Bandits**: For provider/strategy selection (claude_max_proxy)
 - **Deep Q-Networks (DQN)**: For sequential decision making (marker)
 - **Hierarchical RL**: For complex orchestration (claude-module-communicator)
 - **PPO/A3C**: For continuous optimization (arangodb, sparta)
+
+### Advanced Techniques (In Development)
+- **Multi-Agent RL (MARL)**: Decentralized module coordination
+- **Graph Neural Networks**: Topology-aware decision making
+- **Meta-Learning (MAML)**: Rapid adaptation to new modules
+- **Inverse RL (IRL)**: Learning from expert demonstrations
+- **Multi-Objective RL (MORL)**: Balancing competing goals
+- **Curriculum Learning**: Progressive task complexity
+
+### Infrastructure
+- **Automatic Algorithm Selection**: Intelligently choose the best RL approach
 - **Unified Monitoring**: Track performance across all projects
 - **Transfer Learning**: Share knowledge between similar tasks
 - **Safe Deployment**: Gradual rollout with fallback strategies
@@ -66,11 +78,53 @@ reward = calculate_processing_reward(quality, time)
 agent.update(state, action, reward, next_state)
 ```
 
+### Progressive Module Learning (Curriculum Learning)
+```python
+from rl_commons.algorithms.curriculum import ProgressiveCurriculum, Task
+from rl_commons.algorithms import PPOAgent
+
+# Define tasks with increasing complexity
+tasks = [
+    Task("single_marker", difficulty=0.2, context={"modules": ["marker"]}),
+    Task("marker_to_db", difficulty=0.5, context={"modules": ["marker", "arangodb"]},
+         prerequisites=["single_marker"]),
+    Task("full_pipeline", difficulty=0.8, 
+         context={"modules": ["marker", "arangodb", "chat"]},
+         prerequisites=["marker_to_db"])
+]
+
+# Create curriculum
+curriculum = ProgressiveCurriculum(tasks, progression_rate=0.05)
+
+# Train with progressive difficulty
+agent = PPOAgent(state_dim=10, action_dim=4)
+for episode in range(100):
+    task = curriculum.select_next_task()
+    performance = train_on_task(agent, task)
+    curriculum.update_performance(task.task_id, performance, success=performance > 0.7)
+```
+
 ## 🔗 Integration Examples
 
 - [claude_max_proxy Integration](docs/examples/claude_max_proxy_integration.md)
 - [marker Integration](docs/examples/marker_integration.md)
 - [Module Orchestration](docs/examples/module_orchestration.md)
+
+## 🧠 Algorithm Selection
+
+RL Commons includes an intelligent algorithm selection system that automatically chooses the best RL approach based on your task characteristics. See the [Algorithm Selection Guide](docs/guides/algorithm_selection_guide.md) for details.
+
+```python
+from rl_commons.core.algorithm_selector import AlgorithmSelector
+
+# Automatic selection based on task characteristics
+selector = AlgorithmSelector()
+algorithm = selector.select_for_task({
+    'modules': ['marker', 'claude_max_proxy', 'arangodb'],
+    'objectives': ['quality', 'speed', 'cost'],
+    'constraints': {'max_latency': 500}
+})
+```
 
 ## 📊 Monitoring
 
@@ -118,8 +172,12 @@ pytest test/integration/
 
 - [API Reference](docs/api/)
 - [Architecture Guide](docs/architecture/)
+- [Algorithm Selection Guide](docs/guides/algorithm_selection_guide.md)
+- [Module Integration Guide](docs/MODULE_INTEGRATION_GUIDE.md) - **Start Here for claude-module-communicator**
+- [Curriculum Learning Implementation](docs/CURRICULUM_LEARNING_IMPLEMENTATION.md) - **Progressive task complexity**
 - [Integration Guide](docs/guides/integration.md)
 - [Best Practices](docs/guides/best_practices.md)
+- [Advanced RL Implementation Tasks](docs/tasks/034_Advanced_RL_Techniques_Implementation.md)
 
 ## 🤝 Contributing
 

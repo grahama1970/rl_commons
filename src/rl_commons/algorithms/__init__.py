@@ -6,10 +6,31 @@ from .hierarchical import HierarchicalRLAgent
 from .ppo.ppo import PPOAgent
 from .a3c.a3c import A3CAgent
 
+# Curriculum Learning
+from .curriculum import (
+    CurriculumScheduler,
+    Task,
+    TaskDifficulty,
+    PerformanceTracker,
+    AutomaticCurriculum,
+    ProgressiveCurriculum,
+    AdaptiveCurriculum,
+    MetaCurriculum
+)
+
 __all__ = [
     'DQNAgent',
     'ContextualBandit', 
     'HierarchicalRLAgent',
     'PPOAgent',
-    'A3CAgent'
+    'A3CAgent',
+    # Curriculum Learning
+    'CurriculumScheduler',
+    'Task',
+    'TaskDifficulty',
+    'PerformanceTracker',
+    'AutomaticCurriculum',
+    'ProgressiveCurriculum',
+    'AdaptiveCurriculum',
+    'MetaCurriculum'
 ]
